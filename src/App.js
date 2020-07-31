@@ -1,8 +1,10 @@
 import React from 'react';
+import PhotoDay from './PhotoDay'
 import './App.css';
+import PhotoBoard from './PhotoBoard';
 
 
-const apiKEY = process.env.REACT_APP_NASA_API_KEY
+
 
 
 
@@ -10,6 +12,8 @@ function App() {
   return (
     <div className="App">
       <h1>Nasa Photo Board</h1>
+        <PhotoDay />
+        <PhotoBoard />
     </div>
   );
 }
