@@ -7,10 +7,28 @@ body {
   color: white;
 }
 
+
 .title {
   display: flex;
   justify-content: flex-end;
   margin-right: 5rem;
+}
+
+
+.section-title {
+  font-size: 1.75rem;
+}
+
+.photo-day-container {
+  margin: 5rem 0;
+}
+
+.photoDay {
+  margin-top: 5rem;
+}
+
+.rover-container {
+  margin: 7.5rem 0;
 }
 
 
@@ -20,6 +38,7 @@ body {
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
+ 
 }
 
 .apod-image {
@@ -33,7 +52,6 @@ body {
 }
 
 .apod-explanation {
-  
   font-size: .7rem;
   width: 80%;
   margin: 0 auto;
@@ -44,15 +62,33 @@ body {
 .search-box-apod {
   display: flex;
   margin-left: 4.5rem;
-  margin-bottom: -2rem;
+  margin-bottom: -4rem;
   
 }
 
 .apod-word-box {
   margin: 0 auto;
   width: 40%;
-  
   height: auto;
+}
+
+.rover-photo-box {
+  width: 97.5%;
+  margin: 2rem auto;
+}
+
+.rover-photo-box > img {
+  width: 22%;
+  height: auto;
+  padding: .5rem;
+}
+
+
+.search-box-rover {
+  display: flex;
+  margin-left: 4.5rem;
+  margin-bottom: -1rem;
+  
 }
 
 @media only screen and (max-width: 900px) {

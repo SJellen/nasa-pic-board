@@ -71,12 +71,15 @@ function PhotoDay() {
 
 
     return (
-            <div>
+            <div className="photo-day-container">
+             <h1 className="section-title">Photo of the Day</h1>
                  <div>
                 <form className="search-box-apod" onSubmit={handleSubmit} >
             <input type="date" min="1995-06-15" max={today} id="date" className="apod-date" onChange={handleChange} />
             <button className="material-icons search">search</button>
         </form>
+
+       
             </div>
         <div className="photo-of-the-day">
         
