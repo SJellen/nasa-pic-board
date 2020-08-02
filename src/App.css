@@ -6,3 +6,64 @@ body {
   background-color: black;
   color: white;
 }
+
+.title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+
+.photo-of-the-day {
+  padding: 5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.apod-image {
+  width: 50%;
+  height: auto;
+  
+}
+
+.apod-title {
+  font-size: 1.5rem;
+}
+
+.apod-explanation {
+  
+  font-size: .7rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.search-box-apod {
+  display: flex;
+  margin-left: 4.5rem;
+  margin-bottom: -2rem;
+  
+}
+
+.apod-word-box {
+  margin: 0 auto;
+  width: 40%;
+  
+  height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .photo-of-the-day {
+    display: flex;
+    flex-direction: column;
+  }
+  .apod-image {
+    width: 100%;
+  }
+  .apod-word-box {
+    width: 100%;
+  }
+}

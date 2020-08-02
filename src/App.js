@@ -11,7 +11,7 @@ import PhotoBoard from './PhotoBoard';
 function App() {
   return (
     <div className="App">
-      <h1>Nasa Photo Board</h1>
+      <h1 className="title">Nasa Navigator</h1>
         <PhotoDay />
         <PhotoBoard />
     </div>
