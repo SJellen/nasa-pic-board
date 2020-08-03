@@ -5,29 +5,7 @@ const APIlink4 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/pho
 
 function Spirit() {
 
-    const [roverPhotos, setRoverPhotos] = useState({
-        img1: '',
-        img2: '',
-        img3: '',
-        img4: '',
-        img5: '',
-        img6: '',
-        img7: '',
-        img8: '',
-        img9: '',
-        img10: '',
-        img11: '',
-        img12: '',
-        img13: '',
-        img14: '',
-        img15: '',
-        img16: '',
-        img17: '',
-        img18: '',
-        img19: '',
-        img20: '',
-       
-    })
+    const [roverPhotos, setRoverPhotos] = useState({data: []})
 
     
     const [newDate, setNewDate] = useState("2004-03-01")
@@ -38,31 +16,7 @@ function Spirit() {
         .then(res => res.json())
         .then(
             (result) => {
-                
-               
-                setRoverPhotos({
-                    img1: result.photos[0].img_src,
-                    img2: result.photos[1].img_src,
-                    img3: result.photos[2].img_src,
-                    img4: result.photos[3].img_src,
-                    img5: result.photos[4].img_src,
-                    img6: result.photos[5].img_src,
-                    img7: result.photos[6].img_src,
-                    img8: result.photos[7].img_src,
-                    img9: result.photos[8].img_src,
-                    img10: result.photos[9].img_src,
-                    img11: result.photos[10].img_src,
-                    img12: result.photos[11].img_src,
-                    img13: result.photos[12].img_src,
-                    img14: result.photos[13].img_src,
-                    img15: result.photos[14].img_src,
-                    img16: result.photos[15].img_src,
-                    img17: result.photos[16].img_src,
-                    img18: result.photos[17].img_src,
-                    img19: result.photos[18].img_src,
-                    img20: result.photos[19].img_src,
-            
-                })
+                setRoverPhotos({data: result.photos})
             }
         )
         .catch(error => console.log(error))
@@ -76,30 +30,7 @@ function Spirit() {
         .then(res => res.json())
         .then(
             (result) => {
-                setRoverPhotos({
-                    img1: result.photos[0].img_src,
-                    img2: result.photos[1].img_src,
-                    img3: result.photos[2].img_src,
-                    img4: result.photos[3].img_src,
-                    img5: result.photos[4].img_src,
-                    img6: result.photos[5].img_src,
-                    img7: result.photos[6].img_src,
-                    img8: result.photos[7].img_src,
-                    img9: result.photos[8].img_src,
-                    img10: result.photos[9].img_src,
-                    img11: result.photos[10].img_src,
-                    img12: result.photos[11].img_src,
-                    img13: result.photos[12].img_src,
-                    img14: result.photos[13].img_src,
-                    img15: result.photos[14].img_src,
-                    img16: result.photos[15].img_src,
-                    img17: result.photos[16].img_src,
-                    img18: result.photos[17].img_src,
-                    img19: result.photos[18].img_src,
-                    img20: result.photos[19].img_src,
-                   
-
-                })
+                setRoverPhotos({data: result.photos})
 
             }
         )
@@ -121,7 +52,7 @@ function Spirit() {
         setNewDate(
            event.target.value
         )
-        console.log(newDate)
+        
     }
 
     function handleSubmit(event) {
@@ -130,7 +61,10 @@ function Spirit() {
         
     }
 
-
+    const photoMap = roverPhotos.data.map((i) => (
+       
+        <img src={i.img_src} alt="mars rover" key={i.id}/>
+    ))
 
     return (
         <div className="rover-container">
@@ -144,32 +78,7 @@ function Spirit() {
         </form>
 
         <div className="rover-photo-box">
-
-
-            
-            <img src={roverPhotos.img1}  alt="mars rover"/>
-            <img src={roverPhotos.img2 } alt="mars rover"/>
-            <img src={roverPhotos.img3} alt="mars rover"/>
-            <img src={roverPhotos.img4} alt="mars rover"/>
-            <img src={roverPhotos.img5} alt="mars rover"/>
-            <img src={roverPhotos.img6} alt="mars rover"/>
-            <img src={roverPhotos.img7} alt="mars rover"/>
-            <img src={roverPhotos.img8} alt="mars rover"/>
-            <img src={roverPhotos.img9} alt="mars rover"/>
-            <img src={roverPhotos.img10} alt="mars rover"/>
-            <img src={roverPhotos.img11} alt="mars rover"/>
-            <img src={roverPhotos.img12} alt="mars rover"/>
-            <img src={roverPhotos.img13} alt="mars rover"/>
-            <img src={roverPhotos.img14} alt="mars rover"/>
-            <img src={roverPhotos.img15} alt="mars rover"/>
-            <img src={roverPhotos.img16} alt="mars rover"/>
-            <img src={roverPhotos.img17} alt="mars rover"/>
-            <img src={roverPhotos.img18} alt="mars rover"/>
-            <img src={roverPhotos.img19} alt="mars rover"/>
-            <img src={roverPhotos.img20} alt="mars rover"/>
-            
-            
-
+            {photoMap}
         </div>
 
         </div>

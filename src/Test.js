@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2017-01-01&api_key=${apiKEY}`
 
-function Curiosity() {
+function Test() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
 
@@ -18,13 +18,16 @@ function Curiosity() {
             (result) => {
                 let now = new Date().toISOString().slice(0, 10)
                 setToday(now)
+
+                
+                
                 setRoverPhotos({data: result.photos})
             }
         )
         .catch(error => console.log(error))
     }, [])
-
-
+       
+        
 
     function newRequest(newDate){
         const newDateLink = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${newDate}&api_key=${apiKEY}`
@@ -33,15 +36,12 @@ function Curiosity() {
         .then(
             (result) => {
                 setRoverPhotos({data: result.photos})
-
             }
         )
         
     }
 
   
-
-
 
     function handleChange(event) {
         setNewDate(
@@ -56,15 +56,14 @@ function Curiosity() {
         
     }
 
-
+        
 
     const photoMap = roverPhotos.data.map((i) => (
        
         <img src={i.img_src} alt="mars rover" key={i.id}/>
     ))
 
-
-
+ 
     return (
         <div className="rover-container">
                 <h1 className="section-title">Mars Rover: Curiosity</h1>
@@ -89,4 +88,4 @@ function Curiosity() {
 
 
 
-export default Curiosity
+export default Test

@@ -9,6 +9,7 @@ import Spirit from './Spirit';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
         <Opportunity />
         <Spirit />
         <MediaBoard />
+ 
     </div>
   );
 }
