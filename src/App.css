@@ -91,6 +91,13 @@ body {
   
 }
 
+.select-box-rover {
+  display: flex;
+  float: right;
+  margin-right: 4.5rem;
+  margin-bottom: -1rem;
+}
+
 @media only screen and (max-width: 900px) {
   .photo-of-the-day {
     display: flex;

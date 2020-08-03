@@ -1,7 +1,6 @@
 import React from 'react';
 import PhotoDay from './PhotoDay'
 import './App.css';
-import MediaBoard from './MediaBoard';
 import Rover from './Curiosity'
 import Opportunity from './Opportunity'
 import Spirit from './Spirit';
@@ -18,7 +17,10 @@ function App() {
         <Rover />
         <Opportunity />
         <Spirit />
-        <MediaBoard />
+
+
+       
+ 
  
     </div>
   );

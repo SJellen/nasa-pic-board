@@ -6,7 +6,7 @@ const APIlink3 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/pho
 function Opportunity() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
-
+    const [amountShown, setAmountShown] = useState(12)
     
     const [newDate, setNewDate] = useState("2010-01-01")
 
@@ -53,7 +53,19 @@ function Opportunity() {
         newRequest(newDate)
         
     }
-    const photoMap = roverPhotos.data.map((i) => (
+    
+    function handleImageSubmit(event) {
+        event.preventDefault()
+    }
+
+    function handleImageChange(event) {
+        setAmountShown(event.target.value)
+    }
+
+
+    let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
+    
+    const photoMap = slice.map((i) => (
        
         <img src={i.img_src} alt="mars rover" key={i.id}/>
     ))
@@ -66,6 +78,18 @@ function Opportunity() {
                 <form className="search-box-rover"  onSubmit={handleSubmit}>
             <input type="date" min="2004-01-26" max="2010-01-01" id="date" className="rover-date" onChange={handleChange} />
             <button className="material-icons search">search</button>
+        </form>
+
+        <form className="select-box-rover" onSubmit={handleImageSubmit} >
+        <label>Number of Images</label>
+        <select value={amountShown} onChange={handleImageChange}>
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="500">All</option>
+        </select>
         </form>
 
         <div className="rover-photo-box">
