@@ -98,6 +98,20 @@ body {
   margin-bottom: -1rem;
 }
 
+.image-label {
+  margin-right: 1rem;
+}
+
+.insight-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.insight-image {
+  margin: 1rem 0 3rem 0;
+  width: 90%;
+}
+
 @media only screen and (max-width: 900px) {
   .photo-of-the-day {
     display: flex;

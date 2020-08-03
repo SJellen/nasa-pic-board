@@ -4,6 +4,7 @@ import './App.css';
 import Rover from './Curiosity'
 import Opportunity from './Opportunity'
 import Spirit from './Spirit';
+import Weather from './Weather'
 
 
 
@@ -14,6 +15,9 @@ function App() {
     <div className="App">
       <h1 className="title">Nasa Navigator</h1>
         <PhotoDay />
+        <Weather />
+
+
         <Rover />
         <Opportunity />
         <Spirit />

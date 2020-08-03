@@ -79,7 +79,7 @@ function Spirit() {
         </form>
 
         <form className="select-box-rover" onSubmit={handleImageSubmit}>
-        <label>Number of Images</label>
+        <label className="image-label">Number of Images</label>
         <select value={amountShown} onChange={handleImageChange}>
            
             <option value="10">10</option>
