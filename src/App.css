@@ -112,6 +112,19 @@ body {
   width: 90%;
 }
 
+.weather-box {
+  margin-top: -31rem;
+  margin-bottom: 10rem;
+  margin-left: 5rem;
+  padding: 2rem 0;
+  width: 15%;
+  z-index: 3;
+  position: relative;
+  background-color: rgba(168, 69, 69, .59);
+  border-radius: 25px;
+  
+}
+
 @media only screen and (max-width: 900px) {
   .photo-of-the-day {
     display: flex;

@@ -82,7 +82,7 @@ function Spirit() {
         <label className="image-label">Number of Images</label>
         <select value={amountShown} onChange={handleImageChange}>
            
-            <option value="10">10</option>
+            <option value="12">12</option>
             <option value="25">25</option>
             <option value="50">50</option>
             <option value="100">100</option>

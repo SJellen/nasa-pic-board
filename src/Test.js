@@ -1,114 +1,100 @@
 import React, {useState, useEffect} from 'react'
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
-const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2017-01-01&api_key=${apiKEY}`
+const APIlink5 = `https://api.nasa.gov/insight_weather/?api_key=${apiKEY}&feedtype=json&ver=1.0`
 
-function Test() {
 
-    const [roverPhotos, setRoverPhotos] = useState({data: []})
-    const [amountShown, setAmountShown] = useState(12)
-    const [today, setToday] = useState()
-    const [newDate, setNewDate] = useState("2020-01-01")
+const parseDate = (date) => {
+    return new Date(date).toLocaleDateString(undefined, {
+        day: 'numeric',
+        month: 'long'
+    })
+}
 
+function Weather() {
+    const [solIndex, setSolIndex] = useState(3)
+    const [weather, setWeather] = useState({
+        sol: 0,
+        maxTemp: 0,
+        minTemp: 0,
+        windSpeed: 0,
+        windDirectionDegrees: 0,
+        date: 0
+    })
+   
 
     useEffect(() => {
-        fetch(APIlink2)
+        fetch(APIlink5)
         .then(res => res.json())
         .then(
-            (result) => {
-                let now = new Date().toISOString().slice(0, 10)
-                setToday(now)
-
-                
-                
-                setRoverPhotos({data: result.photos})
+            (data) => {
+               const { sol_keys, validity_checks, ...solData } = data
+               let solDays = Object.entries(solData).map(([sol, data]) => {
+                   if (data.HWS === undefined) {
+                       return 'Error'
+                   } else {
+                       return {
+                           sol: sol,
+                           maxTemp: data.AT.mx,
+                           minTemp: data.AT.mn,
+                           windSpeed: data.HWS.av,
+                           windDirectionDegrees: data.WD.most_common.compass_degrees,
+                           date: data.First_UTC
+                       }
+                   }
+               })
+               let selectedDay = solDays[solIndex]
+              
+               setWeather({
+                sol: selectedDay.sol,
+                maxTemp: selectedDay.maxTemp,
+                minTemp: selectedDay.minTemp,
+                windSpeed: selectedDay.windSpeed,
+                windDirectionDegrees: selectedDay.windDirectionDegrees,
+                date: selectedDay.date
+               })
             }
         )
         .catch(error => console.log(error))
     }, [])
-       
+
         
-
-    function newRequest(newDate){
-        const newDateLink = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${newDate}&api_key=${apiKEY}`
-        fetch(newDateLink)
-        .then(res => res.json())
-        .then(
-            (result) => {
-                setRoverPhotos({data: result.photos})
-            }
-        )
-        
-    }
-
-  
-
-    function handleChange(event) {
-        setNewDate(
-           event.target.value
-        )
-        
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault()
-        newRequest(newDate)
-        
-    }
-
-    function handleImageSubmit(event) {
-        event.preventDefault()
-    }
-
-    function handleImageChange(event) {
-        setAmountShown(event.target.value)
-    }
-
-
-    let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
     
-    const photoMap = slice.map((i) => (
-       
-        <img src={i.img_src} alt="mars rover" key={i.id}/>
-    ))
+    
 
- 
+
+
+   
+
+    // const weatherMap = weather.map((i) => ( <span className="sol-day">{i.AT.mx}</span>))
+    
     return (
-        <div className="rover-container">
-                <h1 className="section-title">Mars Rover: This is a test</h1>
-                <form className="search-box-rover"  onSubmit={handleSubmit}>
-            <input type="date" min="2017-01-01" max={today} id="date" className="rover-date" onChange={handleChange} />
-            <button className="material-icons search">search</button>
-        </form>
+        <div>
+            <h1 className="section-title">Weather On Mars</h1>
+            <div className="insight-container">
+            <img src="../insight.jpg" alt="insight" className="insight-image"/>
 
-        <form onSubmit={handleImageSubmit}>
-        <label>Number of Images</label>
-        <select value={amountShown} onChange={handleImageChange}>
-            <option value="10">10</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="500">All</option>
-        </select>
-        </form>
+            <div>
+                <h2>Sol {weather.sol}</h2>
+                <h2>{parseDate(weather.date)}</h2>
 
-        
-        <div className="rover-photo-box">
-            {photoMap}
-        </div>
+                <h3>Temperature</h3>
+                <p>Hi:<br></br>
+                {Math.round(weather.maxTemp)} &#8451;  {Math.round(weather.maxTemp * 9 / 5 + 32)}&#8457;</p>
+                <p>Low:<br></br>
+                {Math.round(weather.minTemp)} &#8451;  {Math.round(weather.minTemp * 9 / 5 + 32)}&#8457;</p>
+
+                <h3>Wind</h3>
+                <p>{weather.windDirectionDegrees} &#xb0;</p>
+                <p>{weather.windSpeed.toFixed(2)} KPH</p>
+                
+            </div>
+            
+
+            </div>
         </div>
     )
 }
 
 
-
-
-
-
-
-
-
-
-
-export default Test
+export default Weather
