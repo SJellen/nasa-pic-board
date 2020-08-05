@@ -10,7 +10,8 @@ function PhotoDay() {
     const [photoDay, setPhotoDay] = useState({
         link: '',
         title: '',
-        explanation: ''
+        explanation: '',
+        media_type: ''
     })
 
     const [today, setToday] = useState()
@@ -27,7 +28,9 @@ function PhotoDay() {
                 setPhotoDay({
                     link: result.url,
                     title: result.title,
-                    explanation: result.explanation
+                    explanation: result.explanation,
+                    media_type: result.media_type
+
                 })
             }
         )
@@ -43,7 +46,8 @@ function PhotoDay() {
                 setPhotoDay({
                     link: result.url,
                     title: result.title,
-                    explanation: result.explanation
+                    explanation: result.explanation,
+                    media_type: result.media_type
                 })
 
             }
@@ -57,16 +61,17 @@ function PhotoDay() {
            event.target.value
         )
         console.log(newDate)
+    
     }
 
     function handleSubmit(event) {
         event.preventDefault()
         newRequest(newDate)
-        console.log(newDate)
+        
     }
 
 
-
+      
 
 
 
@@ -75,15 +80,17 @@ function PhotoDay() {
              <h1 className="section-title">Photo of the Day</h1>
                  <div>
                 <form className="search-box-apod" onSubmit={handleSubmit} >
-            <input type="date" min="1995-06-15" max={today} id="date" className="apod-date" onChange={handleChange} />
+            <input type="date" min="1995-06-15" max={today} id="date" className="apod-date"  placeholder="mm/dd/yyyy" onChange={handleChange}/>
             <button className="material-icons search">search</button>
         </form>
 
        
             </div>
         <div className="photo-of-the-day">
+
+        {photoDay.media_type === "image" ? <img src={photoDay.link} alt="nasa pic of the day" className="apod-image"/> : <iframe  width= "50%" height="auto" src={photoDay.link} frameBorder="0" allowFullScreen title="Astronomy photo of the day"></iframe>}
         
-        <img src={photoDay.link} alt="nasa pic of the day" className="apod-image"/>
+        
            
            <div className="apod-word-box">
               <h4 className="apod-title">{photoDay.title}</h4>

@@ -76,7 +76,7 @@ function Opportunity() {
         <div className="rover-container">
                 <h1 className="section-title">Mars Rover: Opportunity</h1>
                 <form className="search-box-rover"  onSubmit={handleSubmit}>
-            <input type="date" min="2004-01-26" max="2010-01-01" id="date" className="rover-date" onChange={handleChange} />
+            <input type="date" min="2004-01-26" max="2010-01-01" id="date" className="rover-date" onChange={handleChange} placeholder="mm/dd/yyyy"/>
             <button className="material-icons search">search</button>
         </form>
 

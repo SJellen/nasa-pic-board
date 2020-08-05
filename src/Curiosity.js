@@ -78,7 +78,7 @@ function Curiosity() {
         <div className="rover-container">
                 <h1 className="section-title">Mars Rover: Curiosity</h1>
                 <form className="search-box-rover"  onSubmit={handleSubmit}>
-            <input type="date" min="2017-01-01" max={today} id="date" className="rover-date" onChange={handleChange} />
+            <input type="date" min="2017-01-01" max={today} id="date" className="rover-date" onChange={handleChange} placeholder="mm/dd/yyyy"/>
             <button className="material-icons search">search</button>
         </form>
 

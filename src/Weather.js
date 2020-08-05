@@ -12,7 +12,7 @@ const parseDate = (date) => {
 }
 
 function Weather() {
-    const [solIndex, setSolIndex] = useState(5)
+    const [solIndex, setSolIndex] = useState(6)
     const [weather, setWeather] = useState({
         sol: 0,
         maxTemp: 0,
@@ -56,39 +56,70 @@ function Weather() {
             }
         )
         .catch(error => console.log(error))
-    }, [])
+    }, [solIndex])
+
+
+  
 
         
-    
-    
+    function handleDecrement() {
+        
+        if(solIndex >= 0) {
+            setSolIndex(solIndex - 1) 
+           
+        }
+        
+    }
 
+    function handleIncrement() {
+        
+        if(solIndex <= 6) {
+            setSolIndex(solIndex + 1) 
+
+        }
+        
+    }
+    
+    
 
 
    
 
-    // const weatherMap = weather.map((i) => ( <span className="sol-day">{i.AT.mx}</span>))
+   
     
     return (
         <div>
             <h1 className="section-title">Weather On Mars</h1>
             <div className="insight-container">
             <img src="../insight.jpg" alt="insight" className="insight-image"/>
-
+            <div className="weather-word-container">
+                <h2>Latest Weather at Elysium Planitia</h2>
+                <p>Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</p>
+            </div>
             <div className="weather-box">
+           
+            <div className="sol-box">
+                <span className="material-icons left" onClick={handleDecrement} style={{visibility: solIndex === 0 ? 'hidden' : 'visible'}}>keyboard_arrow_left</span>
                 <h2>Sol {weather.sol}</h2>
+                <span className="material-icons right"  onClick={handleIncrement}  style={{visibility: solIndex === 6 ? 'hidden' : 'visible'}}>keyboard_arrow_right</span>
+                
+            </div>
+               
                 <h2>{parseDate(weather.date)}</h2>
-
                 <h3>Temperature</h3>
                 <p>Hi:<br></br>
-                {Math.round(weather.maxTemp)} &#8451;  {Math.round(weather.maxTemp * 9 / 5 + 32)}&#8457;</p>
+                {Math.round(weather.maxTemp)}&#8451;  {Math.round(weather.maxTemp * 9 / 5 + 32)}&#8457;</p>
                 <p>Low:<br></br>
-                {Math.round(weather.minTemp)} &#8451;  {Math.round(weather.minTemp * 9 / 5 + 32)}&#8457;</p>
+                {Math.round(weather.minTemp)}&#8451;  {Math.round(weather.minTemp * 9 / 5 + 32)}&#8457;</p>
 
                 <h3>Wind</h3>
                 <p>{weather.windDirectionDegrees} &#xb0;</p>
                 <p>{weather.windSpeed.toFixed(2)} KPH</p>
                 
             </div>
+
+
+            <a href="https://mars.nasa.gov/insight/" target="_blank" rel="noopener noreferrer" className="material-icons exit-to-insight">exit_to_app_rounded_icon</a>
             
 
             </div>

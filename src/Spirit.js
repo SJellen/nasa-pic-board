@@ -74,7 +74,7 @@ function Spirit() {
 
 
                 <form className="search-box-rover"  onSubmit={handleSubmit}>
-            <input type="date" min="2004-03-01" max="2010-02-01" id="date" className="rover-date" onChange={handleChange} />
+            <input type="date" min="2004-03-01" max="2010-02-01" id="date" className="rover-date" onChange={handleChange} placeholder="mm/dd/yyyy"/>
             <button className="material-icons search">search</button>
         </form>
 
