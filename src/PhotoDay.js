@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from 'react'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink1 = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
@@ -15,7 +18,7 @@ function PhotoDay() {
     })
 
     const [today, setToday] = useState()
-    const [newDate, setNewDate] = useState("2020-01-01")
+    const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10))
 
     
     useEffect(() => {
@@ -30,7 +33,6 @@ function PhotoDay() {
                     title: result.title,
                     explanation: result.explanation,
                     media_type: result.media_type
-
                 })
             }
         )
@@ -49,40 +51,48 @@ function PhotoDay() {
                     explanation: result.explanation,
                     media_type: result.media_type
                 })
-
             }
-        )
-        
+        )  
     }
 
 
-    function handleChange(event) {
+
+    function HandelDatePicker(date) {
         setNewDate(
-           event.target.value
-        )
-        console.log(newDate)
+            date.toISOString().slice(0, 10)
+         )
+         newRequest(date.toISOString().slice(0, 10))
+    }
+
     
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault()
-        newRequest(newDate)
-        
-    }
-
+     let min = new Date('1995-06-15')
+     const minDate = min.setDate(min.getDate() + 2)
+     let max = new Date(today)
+     const maxDate = max.setDate(max.getDate() + 1)
 
       
-
+   
 
 
     return (
             <div className="photo-day-container">
              <h1 className="section-title">Photo of the Day</h1>
-                 <div>
-                <form className="search-box-apod" onSubmit={handleSubmit} >
-            <input type="date" min="1995-06-15" max={today} id="date" className="apod-date"  placeholder="mm/dd/yyyy" onChange={handleChange}/>
-            <button className="material-icons search">search</button>
-        </form>
+                 <div >
+                 <div className="search-box-rover">
+                    <DatePicker
+                                dateFormat="yyyy/MM/DD" 
+                                name="newDate"
+                                onChange={HandelDatePicker}
+                                maxDate={maxDate}
+                                minDate={minDate}
+                                placeholderText="Select a day"
+                                showYearDropdown
+                                yearDropdownItemNumber={40}
+                                scrollableYearDropdown
+                            /> 
+
+                 </div>
+       
 
        
             </div>

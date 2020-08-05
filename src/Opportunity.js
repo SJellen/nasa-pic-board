@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from 'react'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink3 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2009-07-01&api_key=${apiKEY}`
@@ -41,18 +43,6 @@ function Opportunity() {
 
 
 
-    function handleChange(event) {
-        setNewDate(
-           event.target.value
-        )
-        
-    }
-
-    function handleSubmit(event) {
-        event.preventDefault()
-        newRequest(newDate)
-        
-    }
     
     function handleImageSubmit(event) {
         event.preventDefault()
@@ -61,6 +51,28 @@ function Opportunity() {
     function handleImageChange(event) {
         setAmountShown(event.target.value)
     }
+
+
+
+
+
+    function HandelDatePicker(date) {
+        setNewDate(
+            date.toISOString().slice(0, 10)
+         )
+         newRequest(date.toISOString().slice(0, 10))
+    }
+
+    
+     let min = new Date("2004-01-26")
+     const minDate = min.setDate(min.getDate() + 2)
+     let max = new Date("2010-01-01")
+     const maxDate = max.setDate(max.getDate() + 1)
+
+
+
+
+
 
 
     let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
@@ -75,10 +87,23 @@ function Opportunity() {
     return (
         <div className="rover-container">
                 <h1 className="section-title">Mars Rover: Opportunity</h1>
-                <form className="search-box-rover"  onSubmit={handleSubmit}>
-            <input type="date" min="2004-01-26" max="2010-01-01" id="date" className="rover-date" onChange={handleChange} placeholder="mm/dd/yyyy"/>
-            <button className="material-icons search">search</button>
-        </form>
+               
+                <div className="search-box-rover">
+                    <DatePicker
+                        dateFormat="yyyy/MM/DD" 
+                        name="newDate"
+                        onChange={HandelDatePicker}
+                        maxDate={maxDate}
+                        minDate={minDate}
+                        placeholderText="Select a day"
+                        showYearDropdown
+                        yearDropdownItemNumber={40}
+                        scrollableYearDropdown
+                    /> 
+                </div>
+        
+
+
 
         <form className="select-box-rover" onSubmit={handleImageSubmit} >
         <label className="image-label">Number of Images</label>
