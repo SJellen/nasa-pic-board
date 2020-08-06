@@ -60,6 +60,7 @@ function Opportunity() {
         setNewDate(
             date.toISOString().slice(0, 10)
          )
+         console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
 
@@ -85,7 +86,7 @@ function Opportunity() {
 
 
     return (
-        <div className="rover-container">
+        <div className="rover-container" id="opportunity">
                 <h1 className="section-title">Mars Rover: Opportunity</h1>
                
                 <div className="search-box-rover">
@@ -99,6 +100,7 @@ function Opportunity() {
                         showYearDropdown
                         yearDropdownItemNumber={40}
                         scrollableYearDropdown
+                        className="date-picker"
                     /> 
                 </div>
         

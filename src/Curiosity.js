@@ -57,6 +57,7 @@ function Curiosity() {
         setNewDate(
             date.toISOString().slice(0, 10)
          )
+         console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
 
@@ -77,7 +78,7 @@ function Curiosity() {
 
 
     return (
-        <div className="rover-container">
+        <div className="rover-container" id="curiosity">
                 <h1 className="section-title">Mars Rover: Curiosity</h1>
                
 
@@ -92,6 +93,7 @@ function Curiosity() {
                     showYearDropdown
                     yearDropdownItemNumber={40}
                     scrollableYearDropdown
+                    className="date-picker"
             /> 
             </div>
         

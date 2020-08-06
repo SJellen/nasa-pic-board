@@ -61,6 +61,7 @@ function PhotoDay() {
         setNewDate(
             date.toISOString().slice(0, 10)
          )
+         console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
 
@@ -89,6 +90,7 @@ function PhotoDay() {
                                 showYearDropdown
                                 yearDropdownItemNumber={40}
                                 scrollableYearDropdown
+                                className="date-picker"
                             /> 
 
                  </div>
