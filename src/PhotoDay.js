@@ -77,7 +77,7 @@ function PhotoDay() {
 
     return (
             <div className="photo-day-container">
-             <h1 className="section-title">Photo of the Day</h1>
+             <h1 className="section-title">Astronomy Picture of the Day</h1>
                  <div >
                  <div className="search-box-rover">
                     <DatePicker
