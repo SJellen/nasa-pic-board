@@ -206,7 +206,7 @@ a:hover {
 
 
 #weather {
-   padding-top: 5rem;
+   padding-top: 1rem;
 }
 
 #home {
@@ -230,13 +230,21 @@ a:hover {
 }
 
 .weather-word-container {
-  text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
-  max-width: 500px;
+  text-shadow: 2px 2px 0px rgba(22, 22, 22, .75);
+  max-width: 600px;
   margin: 0 auto;
   position: absolute;
   z-index: 3;
-  top: 2.5rem;
+  top: 1.5rem;
   left: 25rem;
+}
+
+.weather-word-container h2 {
+  font-size: 1.75rem;
+}
+
+.weather-word-container p {
+  font-size: 1.25rem;
 }
 
 .sol-box {
@@ -264,8 +272,8 @@ a:hover {
 .exit-to-insight {
   position: absolute;
   z-index: 3;
-  bottom: 5rem;
-  right: -32rem;
+  bottom: 4rem;
+  right: -33rem;
   font-size: 3rem;
   text-decoration: none;
   color: rgb(235, 229, 229);

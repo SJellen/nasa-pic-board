@@ -96,8 +96,8 @@ function Weather() {
             <div className="insight-container">
             <img src="../insight.jpg" alt="insight" className="insight-image"/>
             <div className="weather-word-container">
-                <h2>Latest Weather at Elysium Planitia</h2>
-                <p>Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</p>
+                <h2 >Latest Weather at Elysium Planitia</h2>
+                <p >Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</p>
             </div>
             <div className="weather-box">
            
