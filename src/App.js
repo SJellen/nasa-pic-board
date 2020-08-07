@@ -10,23 +10,23 @@ import useToggler from './useToggler'
 
 
 
+
 function App() {
 
   const [show, toggle] = useToggler(true)
 
-  
-  
+
 
   return (
     <div className="App" id="home">
-      <h1 className="title">Nasa Navigator</h1>
-
+    <div className="header">
+    <h1 className="title">Nasa Navigator</h1>
       <i className="material-icons menu-icon" 
              onClick={toggle}
-             style={{display: show ? "block" : "none"}}
+             style={{ display: show ? "block" : "none"}}
              
              >menu_icon</i>
-      
+       
         <nav style={{display: show ? "none" : "block"}}>
           
           <i className="material-icons close-icon"
@@ -39,6 +39,8 @@ function App() {
             <a href="#opportunity">Opportunity Rover</a>
             <a href="#spirit">Spirit Rover</a> 
         </nav>
+    </div>
+      
         <PhotoDay />
         <Weather />
         <Rover />

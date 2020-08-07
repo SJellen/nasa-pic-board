@@ -9,62 +9,75 @@ body {
   overflow-x: hidden;
 }
 
-nav {
-  background-color: rgba(19, 18, 18, .9075);
-  width: 250px;
-  height: 300px;
+.header {
+  width: 100%;
   position: fixed;
+  height: 5rem;
+  top: 0;
+  z-index: 9;
+  background-color: rgba(11, 61, 145, .985);
+}
+
+nav {
+  margin-top: -5.25rem;
+  margin-right: 20.5rem;
   z-index: 99;
-  bottom: 1rem;
-  left: 2rem;
-  padding-bottom: 1rem;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2px #fcd307;
-  
+  position: relative;
 }
 
 
+
 a {
-  color: white;
+  display: inline;
   text-decoration: none;
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  color: white;
+  padding: 2rem;
+  position: relative;
+  z-index: 99;
+  
   
 }
 
 a:hover {
-  color: #fcd307;
+  cursor: pointer;
+  transition: .5s ease-in;
+  color:  #10316b;
 }
 
 .menu-icon {
   font-size: 2.5rem;
   display: block;
-  position: fixed;
-  bottom: 1rem;
+  position: absolute;
+  top: 1rem;
   left: 2rem;
-  
+  width: 40px;
 }
 
 .menu-icon:hover {
   cursor: pointer;
-  color: #fcd307;
-  
+  color:  #10316b;
+  transition: .5s ease-in;
 }
+
+
 
 .close-icon {
   font-size: 2rem;
   display: block;
   position: relative;
-  margin-left: -2rem;
-  margin-top: 1rem;
+  top: 1.5rem;
+  left: 2rem;
+  width: 40px;
+  z-index: 9;
 }
 
 .close-icon:hover {
   cursor: pointer;
-  color: #fcd307;
+  color:  #10316b;
+  transition: .5s ease-in;
 }
 
 
@@ -72,6 +85,8 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   margin-right: 5rem;
+  color: #dddddd;
+  
 }
 
 .date-picker {
@@ -85,13 +100,13 @@ a:hover {
 
 .section-title {
   font-size: 1.75rem;
-  text-align: left;
-  margin-left: 8rem;
-  margin-bottom: 2.5rem;
+  text-align: center;
+  
+  margin-bottom: 1.5rem;
 }
 
 .photo-day-container {
-  margin: 0rem 0 10rem 0;
+  margin: 9rem 0 10rem 0;
   
 }
 
@@ -189,6 +204,20 @@ a:hover {
   width: 90%;
 }
 
+
+#weather {
+   padding-top: 5rem;
+}
+
+#home {
+  padding-top: .5rem;
+}
+
+#curiosity, #opportunity, #spirit {
+   padding-top: 7.5rem;
+}
+
+
 .weather-box {
   position: absolute;
   top: 12.5rem;
@@ -263,4 +292,67 @@ a:hover {
   .apod-word-box {
     width: 100%;
   }
+}
+
+
+
+@media only screen and (max-width: 750px) {
+  
+
+  .nav {
+    background-color: rgba(11, 61, 145, .975);
+    width: 250px;
+    height: 300px;
+    top: -5rem;
+    left: 0rem;
+    position: relative;
+    z-index: 9;
+   
+  }
+
+  a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  }
+
+  a:hover {
+    transition: .5s ease-in;
+    background-color: #10316b;
+  }
+
+  .menu-icon {
+    font-size: 2.5rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 40px;
+  }
+  
+  .menu-icon:hover {
+    cursor: pointer;
+    transition: .5s ease-in;
+    color: silver;
+  }
+
+
+.close-icon {
+  font-size: 2rem;
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 40px;
+} 
+.close-icon:hover {
+  cursor: pointer;
+  color: #10316b;
+  transition: .5s ease-in;
+}
+
 }

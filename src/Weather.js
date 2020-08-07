@@ -31,7 +31,9 @@ function Weather() {
                const { sol_keys, validity_checks, ...solData } = data
                let solDays = Object.entries(solData).map(([sol, data]) => {
                    if (data.HWS === undefined) {
-                       return 'Error'
+                       return 'Error', console.log('Sol data not complete.')
+
+                       
                    } else {
                        return {
                            sol: sol,
@@ -88,6 +90,7 @@ function Weather() {
    
     
     return (
+        
         <div id="weather">
             <h1 className="section-title" >The Weather On Mars</h1>
             <div className="insight-container">
