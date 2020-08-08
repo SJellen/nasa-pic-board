@@ -6,6 +6,7 @@ import Opportunity from './Opportunity'
 import Spirit from './Spirit';
 import Weather from './Weather'
 import useToggler from './useToggler'
+import Footer from './Footer'
 
 
 
@@ -46,6 +47,8 @@ function App() {
         <Rover />
         <Opportunity />
         <Spirit />
+
+        <Footer />
 
 
     </div>
