@@ -82,7 +82,7 @@ function Curiosity() {
                 <h1 className="section-title">Mars Rover: Curiosity</h1>
                 <div className="mission-box">
                     <h3>Start of Mission</h3>
-                            <p>Launch date: November 26th, 2011<br></br>Landing Date: August 6th, 2012</p>
+                            <p>Launch date: <span className="launch">November 26th, 2011</span><br></br>Landing Date: <span className="launch">August 6th, 2012</span></p>
                 
                 </div>
                

@@ -80,9 +80,9 @@ function Spirit() {
                 <h1 className="section-title">Mars Rover: Spirit</h1>
                 <div className="mission-box">
                     <h3>Start of Mission</h3>
-                            <p>Launch date: July 10th 2003<br></br>Landing Date: January 04th 2004</p>
+                            <p>Launch date: <span className="launch">July 10th 2003</span><br></br>Landing Date: <span className="launch">January 04th 2004</span></p>
                 <h3>End of Mission:</h3>
-                            <p>Last Contact: March 22nd, 2011<br></br> Declared: May 25th, 2011</p>
+                            <p>Last Contact: <span className="missing">March 22nd, 2011</span><br></br> Declared: <span className="death">May 25th, 2011</span></p>
                 </div>
 
                 <div className="search-box-rover">

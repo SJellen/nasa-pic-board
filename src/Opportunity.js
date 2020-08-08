@@ -90,9 +90,9 @@ function Opportunity() {
                 <h1 className="section-title">Mars Rover: Opportunity</h1>
                 <div className="mission-box">
                     <h3>Start of Mission</h3>
-                            <p>Launch date: July 7th 2003<br></br>Landing Date: January 25th 2004</p>
+                            <p>Launch date: <span className="launch">July 7th 2003</span><br></br>Landing Date: <span className="launch">January 25th 2004</span></p>
                 <h3>End of Mission:</h3>
-                            <p>Last Contact: June 10th, 2018<br></br> Declared: February 13th, 2019</p>
+                            <p>Last Contact: <span className="missing">June 10th, 2018</span><br></br> Declared: <span className="death">February 13th, 2019</span></p>
                 </div>
                 
                

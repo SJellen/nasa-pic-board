@@ -175,6 +175,18 @@ a:hover {
   margin: 0 auto 2rem auto;
 }
 
+.launch {
+  color: green;
+}
+
+.missing {
+  color: yellow;
+}
+
+.death {
+  color: red;
+}
+
 
 
 .rover-photo-box {
