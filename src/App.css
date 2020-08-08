@@ -7,6 +7,7 @@ body {
   color: white;
   max-width: 100%;
   overflow-x: hidden;
+  
 }
 
 .header {
@@ -87,9 +88,8 @@ a:hover {
 .title {
   display: flex;
   justify-content: flex-end;
-  margin-right: 5rem;
+  margin-right: 2.5rem;
   color: #dddddd;
-  
 }
 
 .date-picker {
@@ -104,7 +104,7 @@ a:hover {
 .section-title {
   font-size: 1.75rem;
   text-align: center;
-  
+  font-weight: 900;
   margin-bottom: 1.5rem;
 }
 
@@ -252,16 +252,16 @@ a:hover {
   position: absolute;
   z-index: 3;
   top: 1.5rem;
-  left: 25rem;
+  left: 22.5rem;
+  text-align: center;
 }
 
 .weather-word-container h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-.weather-word-container p {
-  font-size: 1.25rem;
-}
+
 
 .sol-box {
   display: flex;
@@ -289,11 +289,24 @@ a:hover {
   position: absolute;
   z-index: 3;
   bottom: 4rem;
-  right: -33rem;
+  right: -34rem;
   font-size: 3rem;
   text-decoration: none;
   color: rgb(235, 229, 229);
   text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
+}
+
+.exit-to-rover {
+  position: relative;
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: rgb(235, 229, 229);
+  text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
+  display: block;
+  width: 25px;
+  float: right;
+  margin-right: 7rem;
+  z-index: 1;
 }
 
 .footer {

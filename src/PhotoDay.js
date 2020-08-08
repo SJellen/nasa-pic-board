@@ -79,18 +79,18 @@ function PhotoDay() {
             <div className="photo-day-container">
              <h1 className="section-title">Astronomy Picture of the Day</h1>
                  <div >
-                 <div className="search-box-rover">
+                 <div className="search-box-rover" >
                     <DatePicker
                                 dateFormat="yyyy/MM/DD" 
                                 name="newDate"
                                 onChange={HandelDatePicker}
                                 maxDate={maxDate}
                                 minDate={minDate}
-                                placeholderText="Select a day"
+                                placeholderText="Select a day &nbsp;  &nbsp;  &nbsp; &#128269;"
                                 showYearDropdown
                                 yearDropdownItemNumber={40}
                                 scrollableYearDropdown
-                                className="date-picker"
+                                className="date-picker"   
                             /> 
 
                  </div>

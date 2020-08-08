@@ -52,8 +52,6 @@ function Spirit() {
 
 
 
-
-
     function HandelDatePicker(date) {
         setNewDate(
             date.toISOString().slice(0, 10)
@@ -61,6 +59,7 @@ function Spirit() {
          console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
+    
 
     
      let min = new Date("2004-01-04")
@@ -93,7 +92,7 @@ function Spirit() {
                                 onChange={HandelDatePicker}
                                 maxDate={maxDate}
                                 minDate={minDate}
-                                placeholderText="Select a day"
+                                placeholderText="Select a day &nbsp;  &nbsp;  &nbsp; &#128269;"
                                 showYearDropdown
                                 yearDropdownItemNumber={40}
                                 scrollableYearDropdown
@@ -119,7 +118,7 @@ function Spirit() {
         <div className="rover-photo-box">
             {photoMap}
         </div>
-
+        <a href="https://www.jpl.nasa.gov/missions/mars-exploration-rover-spirit-mer-spirit/" target="_blank" rel="noopener noreferrer" className="material-icons exit-to-rover">exit_to_app_rounded_icon</a>
         </div>
     )
 }

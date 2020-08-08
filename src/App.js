@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PhotoDay from './PhotoDay'
 import './App.css';
 import Rover from './Curiosity'

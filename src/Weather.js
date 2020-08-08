@@ -31,7 +31,7 @@ function Weather() {
                const { sol_keys, validity_checks, ...solData } = data
                let solDays = Object.entries(solData).map(([sol, data]) => {
                    if (data.HWS === undefined) {
-                       return 'Error', console.log('Sol data not complete.')
+                       return 'Error'
 
                        
                    } else {
@@ -92,12 +92,12 @@ function Weather() {
     return (
         
         <div id="weather">
-            <h1 className="section-title" >The Weather On Mars</h1>
+            <h1 className="section-title" >Latest Weather at Elysium Planitia</h1>
+            
             <div className="insight-container">
             <img src="../insight.jpg" alt="insight" className="insight-image"/>
             <div className="weather-word-container">
-                <h2 >Latest Weather at Elysium Planitia</h2>
-                <p >Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</p>
+                <h2 >Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</h2>
             </div>
             <div className="weather-box">
            
