@@ -63,7 +63,7 @@ function Spirit() {
     }
 
     
-     let min = new Date("2004-03-01")
+     let min = new Date("2004-01-04")
      const minDate = min.setDate(min.getDate() + 2)
      let max = new Date("2010-02-01")
      const maxDate = max.setDate(max.getDate() + 1)
@@ -79,6 +79,12 @@ function Spirit() {
     return (
         <div className="rover-container" id="spirit">
                 <h1 className="section-title">Mars Rover: Spirit</h1>
+                <div className="mission-box">
+                    <h3>Start of Mission</h3>
+                            <p>Launch date: July 10th 2003<br></br>Landing Date: January 04th 2004</p>
+                <h3>End of Mission:</h3>
+                            <p>Last Contact: March 22nd, 2011<br></br> Declared: May 25th, 2011</p>
+                </div>
 
                 <div className="search-box-rover">
                     <DatePicker

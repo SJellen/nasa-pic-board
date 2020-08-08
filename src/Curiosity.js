@@ -62,7 +62,7 @@ function Curiosity() {
     }
 
     
-     let min = new Date('2016-12-31')
+     let min = new Date('2012-08-05')
      const minDate = min.setDate(min.getDate() + 2)
      let max = new Date(today)
      const maxDate = max.setDate(max.getDate() + 1)
@@ -80,6 +80,11 @@ function Curiosity() {
     return (
         <div className="rover-container" id="curiosity">
                 <h1 className="section-title">Mars Rover: Curiosity</h1>
+                <div className="mission-box">
+                    <h3>Start of Mission</h3>
+                            <p>Launch date: November 26th, 2011<br></br>Landing Date: August 6th, 2012</p>
+                
+                </div>
                
 
             <div className="search-box-rover">

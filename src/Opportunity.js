@@ -65,9 +65,9 @@ function Opportunity() {
     }
 
     
-     let min = new Date("2004-01-26")
+     let min = new Date("2004-01-24")
      const minDate = min.setDate(min.getDate() + 2)
-     let max = new Date("2010-01-01")
+     let max = new Date("2018-06-05")
      const maxDate = max.setDate(max.getDate() + 1)
 
 
@@ -88,6 +88,13 @@ function Opportunity() {
     return (
         <div className="rover-container" id="opportunity">
                 <h1 className="section-title">Mars Rover: Opportunity</h1>
+                <div className="mission-box">
+                    <h3>Start of Mission</h3>
+                            <p>Launch date: July 7th 2003<br></br>Landing Date: January 25th 2004</p>
+                <h3>End of Mission:</h3>
+                            <p>Last Contact: June 10th, 2018<br></br> Declared: February 13th, 2019</p>
+                </div>
+                
                
                 <div className="search-box-rover">
                     <DatePicker
