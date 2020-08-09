@@ -9,7 +9,7 @@ function Opportunity() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
-    
+    const [visibleDate, setVisibleDate] = useState(new Date("2010-01-01"))
     const [newDate, setNewDate] = useState("2010-01-01")
 
 
@@ -57,6 +57,7 @@ function Opportunity() {
 
 
     function HandelDatePicker(date) {
+        setVisibleDate(date)
         setNewDate(
             date.toISOString().slice(0, 10)
          )
@@ -83,6 +84,12 @@ function Opportunity() {
         <img src={i.img_src} alt="mars rover" key={i.id}/>
     ))
 
+    function dateConversion() {
+        let convertDate = new Date(visibleDate)
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return convertDate.toLocaleString('en-US', options)
+    }
+
 
 
     return (
@@ -95,36 +102,39 @@ function Opportunity() {
                             <p>Last Contact: <span className="missing">June 10th, 2018</span><br></br> Declared: <span className="death">February 13th, 2019</span></p>
                 </div>
                 
-               
-                <div className="search-box-rover">
-                    <DatePicker
-                        dateFormat="yyyy/MM/DD" 
-                        name="newDate"
-                        onChange={HandelDatePicker}
-                        maxDate={maxDate}
-                        minDate={minDate}
-                        placeholderText="Select a day &nbsp;  &nbsp;  &nbsp; &#128269;"
-                        showYearDropdown
-                        yearDropdownItemNumber={40}
-                        scrollableYearDropdown
-                        className="date-picker"
-                    /> 
+                <div className="select-box">
+                    <div className="search-box-rover">
+                                        <DatePicker
+                                            dateFormat="yyyy/MM/DD" 
+                                            name="newDate"
+                                            onChange={HandelDatePicker}
+                                            maxDate={maxDate}
+                                            minDate={minDate}
+                                            placeholderText="Select a day &nbsp;  &nbsp;  &nbsp; &#128269;"
+                                            showYearDropdown
+                                            yearDropdownItemNumber={40}
+                                            scrollableYearDropdown
+                                            className="date-picker"
+                                        /> 
+                                    </div>
+                            
+                                    <span className="current-selected-date">{dateConversion(visibleDate)}</span>
+
+
+                            <form className="select-box-rover" onSubmit={handleImageSubmit} >
+                            <label className="image-label">Number of Images</label>
+                            <select value={amountShown} onChange={handleImageChange}>
+                                <option value="12">12</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="200">200</option>
+                                <option value="500">All</option>
+                            </select>
+                            </form>
                 </div>
-        
-
-
-
-        <form className="select-box-rover" onSubmit={handleImageSubmit} >
-        <label className="image-label">Number of Images</label>
-        <select value={amountShown} onChange={handleImageChange}>
-            <option value="12">12</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
-            <option value="200">200</option>
-            <option value="500">All</option>
-        </select>
-        </form>
+               
+               
 
         <div className="rover-photo-box">
             {photoMap}

@@ -176,15 +176,15 @@ a:hover {
 }
 
 .launch {
-  color: green;
+  color: #639a67;
 }
 
 .missing {
-  color: yellow;
+  color: #fbe555;
 }
 
 .death {
-  color: red;
+  color: #f64b3c;
 }
 
 
@@ -200,19 +200,27 @@ a:hover {
   padding: .5rem;
 }
 
+.select-box {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
 
 .search-box-rover {
   display: flex;
   margin-left: 8rem;
   width: fit-content;
- 
   margin-bottom: -1rem;
   
 }
 
+.current-selected-date {
+  color: #eae9e9;
+}
+
 .select-box-rover {
-  display: flex;
-  float: right;
   margin-right: 8rem;
   margin-bottom: -1rem;
 }
@@ -230,6 +238,7 @@ a:hover {
 .insight-image {
   margin: 1rem 0 3rem 0;
   width: 90%;
+  
 }
 
 
@@ -255,21 +264,24 @@ a:hover {
   z-index: 3;
   background-color: rgba(22, 22, 22, .75);
   border-radius: 25px;
+  transform: scale(.90);
 }
 
 .weather-word-container {
   text-shadow: 2px 2px 0px rgba(22, 22, 22, .75);
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   position: absolute;
   z-index: 3;
-  top: 1.5rem;
-  left: 22.5rem;
+  top: 2.5rem;
+  left: 25rem;
   text-align: center;
+  border-radius: 5px;
+  background-color: rgba(22, 22, 22, .75);
 }
 
 .weather-word-container h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
 }
 

@@ -34,7 +34,7 @@ function App() {
               onClick={toggle}
               style={{display: show ? "none" : "block"}}
               >close_icon</i>
-            <a href="#home">Home</a>
+            <a href="#home">Photo of the Day</a>
             <a href="#weather">Mars Weather</a>
             <a href="#curiosity">Curiosity Rover</a>
             <a href="#opportunity">Opportunity Rover</a>

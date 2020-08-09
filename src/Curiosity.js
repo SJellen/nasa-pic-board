@@ -9,6 +9,7 @@ function Curiosity() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
+    const [visibleDate, setVisibleDate] = useState(new Date("2004-03-01"))
     const [today, setToday] = useState()
     const [newDate, setNewDate] = useState("2020-01-01")
 
@@ -54,6 +55,7 @@ function Curiosity() {
 
 
     function HandelDatePicker(date) {
+        setVisibleDate(date)
         setNewDate(
             date.toISOString().slice(0, 10)
          )
@@ -76,6 +78,13 @@ function Curiosity() {
     ))
 
 
+    function dateConversion() {
+        let convertDate = new Date(visibleDate)
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return convertDate.toLocaleString('en-US', options)
+    }
+
+
 
     return (
         <div className="rover-container" id="curiosity">
@@ -86,8 +95,8 @@ function Curiosity() {
                 
                 </div>
                
-
-            <div className="search-box-rover">
+            <div className="select-box">
+                <div className="search-box-rover">
             <DatePicker
                     dateFormat="yyyy/MM/DD" 
                     name="newDate"
@@ -102,7 +111,7 @@ function Curiosity() {
             /> 
             </div>
         
-
+            <span className="current-selected-date">{dateConversion(visibleDate)}</span>
 
         <form className="select-box-rover" onSubmit={handleImageSubmit}>
         <label className="image-label">Number of Images</label>
@@ -116,6 +125,8 @@ function Curiosity() {
             <option value="500">All</option>
         </select>
         </form>
+            </div>
+            
         <div className="rover-photo-box">
             {photoMap}
         </div>
