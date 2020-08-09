@@ -79,7 +79,7 @@ function PhotoDay() {
             <div className="photo-day-container">
              <h1 className="section-title">Astronomy Picture of the Day</h1>
                  <div >
-                 <div className="search-box-rover" >
+                 <div className="search-apod" >
                     <DatePicker
                                 dateFormat="yyyy/MM/DD" 
                                 name="newDate"
