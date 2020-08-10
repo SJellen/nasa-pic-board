@@ -158,10 +158,12 @@ iframe {
   color: #eeeeee;
 }
 
-.search-box-apod {
+.search-apod {
   display: flex;
-  margin-left: 8rem;
-  margin-bottom: -4rem;
+  width: 40%;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
   
 }
 
@@ -263,7 +265,6 @@ iframe {
 
 
 .weather-box {
-  
   margin-top: -35rem;
   margin-left: 5rem;
   padding: 2rem 0;
@@ -328,6 +329,10 @@ iframe {
   text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
 }
 
+.exit-to-insight:hover {
+  background-color: transparent;
+}
+
 .exit-to-rover {
   position: relative;
   font-size: 2.5rem;
@@ -341,11 +346,16 @@ iframe {
   margin-top: -2.5rem;
   z-index: 1;
 }
+.exit-to-rover:hover {
+  background-color: transparent;
+}
 
 .footer {
   display: flex;
   justify-content: space-between;
 }
+
+
 
 .logo {
   border-radius: 50%;
@@ -416,10 +426,10 @@ iframe {
   }
 
   nav {
-    margin-top: -4.4rem;
+    margin-top: -4.54rem;
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 65%;
   }
   a {
     padding: 0 1rem;
@@ -428,7 +438,10 @@ iframe {
   .photo-of-the-day {
     flex-direction: column;
     width: 90%;
-    
+  }
+
+  .search-apod {
+    width: 50%;
   }
 
   .apod-image {
@@ -481,6 +494,7 @@ iframe {
 
 
 @media only screen and (max-width: 900px) {
+  
   .photo-of-the-day {
     display: flex;
     flex-direction: column;
@@ -563,7 +577,7 @@ iframe {
     margin-top: 1rem;
   }
 
-  a {
+  nav > a {
   color: white;
   text-decoration: none;
   display: flex;
@@ -574,7 +588,7 @@ iframe {
   font-size: 1rem;
   }
 
-  a:hover {
+  nav > a:hover {
     transition: .5s ease-in;
     background-color: rgba(11, 61, 145, .975);
     
@@ -614,4 +628,115 @@ iframe {
   transition: .5s ease-in;
 }
 
+.search-apod {
+  width: 80%;
+}
+
+.weather-box {
+  transform: scale(.6);
+  margin-top: -27.5rem;
+  margin-left: -1rem;
+}
+
+.weather-word-container {
+  transform: scale(.75);
+  width: 100%;
+  margin-left: -18rem;
+  margin-top: -2rem;
+}
+
+.exit-to-insight {
+  margin-right: 1rem;
+  
+}
+
+.rover-photo-box > img {
+  width: 40%;
+}
+.exit-to-rover {
+  margin-right: 3rem;
+  float: right;
+}
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    .insight-image {
+      width: 200%;
+    }
+    .insight-container {
+      width: 100vw;
+      overflow: hidden;
+    }
+    .weather-word-container {
+      margin-top: 1.5rem;
+      margin-left: -25rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  .App {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .search-apod {
+    flex-direction: column;
+    width: 60%;
+    height: 50px;
+  }
+  .section-title {
+   font-size: 1.35rem;
+  }
+
+  iframe {
+    width: 90%;
+    min-height: 300px;
+  }
+
+  .header {
+    max-width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .App {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  .section-title {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  nav {
+    width: 100vw;
+    border-bottom-left-radius: 15px;
+  }
+
+  .lastAnchor {
+    border-bottom-left-radius: 15px;
+  }
+
+  .weather-word-container {
+    margin-top: -1rem;
+    margin-left: -25rem;
+  }
+
+  .exit-to-insight {
+    margin-right: .15rem;
+  }
+
+.rover-photo-box > img {
+  width: 80%;
+}
+
+.exit-to-rover {
+  margin-right: 1.5rem;
+}
 }

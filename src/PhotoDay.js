@@ -9,7 +9,7 @@ const APIlink1 = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
 
 
 function PhotoDay() {
-    
+   
     const [photoDay, setPhotoDay] = useState({
         link: '',
         title: '',
@@ -19,7 +19,7 @@ function PhotoDay() {
 
     const [today, setToday] = useState()
     const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10))
-
+    const [visibleDate, setVisibleDate] = useState(null)
     
     useEffect(() => {
         fetch(APIlink1)
@@ -28,6 +28,7 @@ function PhotoDay() {
             (result) => {
                 let now = new Date().toISOString().slice(0, 10)
                 setToday(now)
+                
                 setPhotoDay({
                     link: result.url,
                     title: result.title,
@@ -58,6 +59,7 @@ function PhotoDay() {
 
 
     function HandelDatePicker(date) {
+        setVisibleDate(date)
         setNewDate(
             date.toISOString().slice(0, 10)
          )
@@ -71,14 +73,25 @@ function PhotoDay() {
      let max = new Date(today)
      const maxDate = max.setDate(max.getDate() + 1)
 
-      
+     function dateConversion() {
+         if (visibleDate !== null) {
+        let convertDate = new Date(visibleDate)
+        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        return convertDate.toLocaleString('en-US', options)
+         } else {
+             return ''
+         }
+
+        
+    }
+
    
 
 
     return (
             <div className="photo-day-container">
              <h1 className="section-title">Astronomy Picture of the Day</h1>
-                 <div >
+                
                  <div className="search-apod" >
                     <DatePicker
                                 dateFormat="yyyy/MM/DD" 
@@ -92,12 +105,12 @@ function PhotoDay() {
                                 scrollableYearDropdown
                                 className="date-picker"   
                             /> 
-
+                    <span className="current-selected-date">{dateConversion(visibleDate)}</span>
                  </div>
-       
+                 
 
        
-            </div>
+            
         <div className="photo-of-the-day">
 
         {photoDay.media_type === "image" ? <img src={photoDay.link} alt="nasa pic of the day" className="apod-image"/> : <iframe  width= "50%" height="auto" src={photoDay.link} frameBorder="0" allowFullScreen title="Astronomy photo of the day"></iframe>}
