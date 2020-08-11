@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> A page to browse NASA images on the NASA API.
+> A page to browse NASA images on the NASA API. Astronomy Photo of the Day, Martian Weather, and 3 Mars Rovers.
 
 ### 🏠 [Homepage](https://youthful-yonath-b6a4b7.netlify.app/)
 
