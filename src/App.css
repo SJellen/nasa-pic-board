@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -144,9 +146,9 @@ a:hover {
 
 iframe {
  margin: 0 auto;
- height: auto;
  width: 50%;
- height: auto;
+ min-height: 300px;
+ 
 }
 
 .apod-explanation {
