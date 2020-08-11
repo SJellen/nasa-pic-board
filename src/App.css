@@ -419,6 +419,10 @@ iframe {
 
 
 @media only screen and (max-width: 1050px) {
+  .App {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
   .title {
     font-size: 1.5rem;
     margin-top: 1.5rem;
@@ -426,10 +430,14 @@ iframe {
   }
 
   nav {
-    margin-top: -4.54rem;
+    margin-top: -4.4rem;
     display: flex;
     justify-content: space-around;
-    width: 65%;
+    width: 100%;
+  }
+
+  .header {
+    max-width: 100%;
   }
   a {
     padding: 0 1rem;
@@ -494,6 +502,8 @@ iframe {
 
 
 @media only screen and (max-width: 900px) {
+
+  
   
   .photo-of-the-day {
     display: flex;
@@ -725,7 +735,10 @@ iframe {
 
   .weather-word-container {
     margin-top: -1rem;
-    margin-left: -25rem;
+    margin-left: -26rem;
+     width: 100%;
+     text-align: left;
+     padding: 1rem;
   }
 
   .exit-to-insight {
@@ -739,4 +752,32 @@ iframe {
 .exit-to-rover {
   margin-right: 1.5rem;
 }
+}
+
+@media only screen and (max-width: 376px) {
+  .section-title {
+    width: 70%;
+  }
+
+  .apod-title {
+    font-size: 1.25rem;
+  }
+
+  .insight-image {
+    margin-top: 10rem;
+  }
+
+  .weather-box {
+    margin-top: -30rem;
+   
+  }
+
+  .weather-word-container {
+    margin-top: -3rem;
+  }
+
+  .exit-to-insight {
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
 }
