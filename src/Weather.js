@@ -12,14 +12,14 @@ const parseDate = (date) => {
 }
 
 function Weather() {
-    const [solIndex, setSolIndex] = useState(6)
+    const [solIndex, setSolIndex] = useState(0)
     const [weather, setWeather] = useState({
         sol: 0,
         maxTemp: 0,
         minTemp: 0,
         windSpeed: 0,
         windDirectionDegrees: 0,
-        date: 0
+        date: "0"
     })
    
 
@@ -28,7 +28,9 @@ function Weather() {
         .then(res => res.json())
         .then(
             (data) => {
+                
                const { sol_keys, validity_checks, ...solData } = data
+               
                let solDays = Object.entries(solData).map(([sol, data]) => {
                    if (data.HWS === undefined) {
                        return 'Error'
