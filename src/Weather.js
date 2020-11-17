@@ -119,7 +119,7 @@ function Weather() {
 
                 <h3>Wind</h3>
                 <p>{weather.windDirectionDegrees} &#xb0;</p>
-                <p>{weather.windSpeed.toFixed(2)} KPH</p>
+                <p>{weather.windSpeed && weather.windSpeed.toFixed(2)} KPH</p>
                 
             </div>
 
