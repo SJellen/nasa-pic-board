@@ -109,16 +109,25 @@ function Weather() {
                 <span className="material-icons right"  onClick={handleIncrement}  style={{visibility: solIndex === 6 ? 'hidden' : 'visible'}}>keyboard_arrow_right</span>
                 
             </div>
-               
+            { weather.date && 
                 <h2>{parseDate(weather.date)}</h2>
+            }
+               
+                
                 <h3>Temperature</h3>
-                <p>Hi:<br></br>
+               { weather.maxTemp && 
+                   <p>Hi:<br></br>
                 {Math.round(weather.maxTemp)}&#8451;  {Math.round(weather.maxTemp * 9 / 5 + 32)}&#8457;</p>
-                <p>Low:<br></br>
-                {Math.round(weather.minTemp)}&#8451;  {Math.round(weather.minTemp * 9 / 5 + 32)}&#8457;</p>
+               } 
+
+               { weather.minTemp &&
+                    <p>Low:<br></br>
+                {Math.round( weather.minTemp)}&#8451;  {Math.round( weather.minTemp * 9 / 5 + 32)}&#8457;</p>
+               }
+               
 
                 <h3>Wind</h3>
-                <p>{weather.windDirectionDegrees} &#xb0;</p>
+                <p>{weather.windDirectionDegrees && weather.windDirectionDegrees} &#xb0;</p>
                 <p>{weather.windSpeed && weather.windSpeed.toFixed(2)} KPH</p>
                 
             </div>
