@@ -12,7 +12,7 @@ const parseDate = (date) => {
 }
 
 function Weather() {
-    const [solIndex, setSolIndex] = useState(0)
+    const [solIndex, setSolIndex] = useState(5)
     const [weather, setWeather] = useState({
         sol: 0,
         maxTemp: 0,
@@ -101,7 +101,7 @@ function Weather() {
             <div className="weather-word-container">
                 <h2 >Insight takes daily weather measurements on the surface of Mars at Elysium Planitia, a plain near the equator of Mars.</h2>
             </div>
-            <div className="weather-box">
+          { weather &&  <div className="weather-box">
            
             <div className="sol-box">
                 <span className="material-icons left" onClick={handleDecrement} style={{visibility: solIndex === 0 ? 'hidden' : 'visible'}}>keyboard_arrow_left</span>
@@ -130,7 +130,7 @@ function Weather() {
                 <p>{weather.windDirectionDegrees && weather.windDirectionDegrees} &#xb0;</p>
                 <p>{weather.windSpeed && weather.windSpeed.toFixed(2)} KPH</p>
                 
-            </div>
+            </div>}
 
 
             <a href="https://mars.nasa.gov/insight/" target="_blank" rel="noopener noreferrer" className="material-icons exit-to-insight">exit_to_app_rounded_icon</a>

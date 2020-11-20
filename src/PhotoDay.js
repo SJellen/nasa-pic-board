@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
-const APIlink1 = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
+// const APIlink1 = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
 
 
 
@@ -18,16 +18,23 @@ function PhotoDay() {
     })
 
     const [today, setToday] = useState()
+    // eslint-disable-next-line 
     const [newDate, setNewDate] = useState(new Date().toISOString().slice(0, 10))
     const [visibleDate, setVisibleDate] = useState(null)
     
     useEffect(() => {
-        fetch(APIlink1)
+        let d = new Date()
+        const now = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`
+        setToday(now)
+        
+        fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKEY}&date=${now}`)
         .then(res => res.json())
         .then(
             (result) => {
-                let now = new Date().toISOString().slice(0, 10)
-                setToday(now)
+                
+
+                // let now = new Date().toISOString().slice(0, 10)
+                
                 
                 setPhotoDay({
                     link: result.url,
@@ -38,7 +45,11 @@ function PhotoDay() {
             }
         )
         .catch(error => console.log(error))
+       
+        
     }, [])
+
+  
 
     function newRequest(newDate){
         const newDateLink = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}&date=${newDate}`
@@ -46,6 +57,7 @@ function PhotoDay() {
         .then(res => res.json())
         .then(
             (result) => {
+                
                 setPhotoDay({
                     link: result.url,
                     title: result.title,
@@ -63,7 +75,7 @@ function PhotoDay() {
         setNewDate(
             date.toISOString().slice(0, 10)
          )
-         console.info(newDate)
+        //  console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
 
