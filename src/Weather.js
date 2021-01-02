@@ -12,15 +12,8 @@ const parseDate = (date) => {
 }
 
 function Weather() {
-    const [solIndex, setSolIndex] = useState(5)
-    const [weather, setWeather] = useState({
-        sol: 0,
-        maxTemp: 0,
-        minTemp: 0,
-        windSpeed: 0,
-        windDirectionDegrees: 0,
-        date: "0"
-    })
+    const [solIndex, setSolIndex] = useState(0)
+    const [weather, setWeather] = useState([])
    
 
     useEffect(() => {
@@ -28,7 +21,7 @@ function Weather() {
         .then(res => res.json())
         .then(
             (data) => {
-                
+                console.log(data)
                const { sol_keys, validity_checks, ...solData } = data
                
                let solDays = Object.entries(solData).map(([sol, data]) => {
@@ -77,7 +70,7 @@ function Weather() {
 
     function handleIncrement() {
         
-        if(solIndex <= 6) {
+        if(solIndex <= 5) {
             setSolIndex(solIndex + 1) 
 
         }
