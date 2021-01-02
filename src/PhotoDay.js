@@ -27,7 +27,7 @@ function PhotoDay() {
         const now = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`
         setToday(now)
         
-        fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKEY}&date=${now}`)
+        fetch(`https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`)
         .then(res => res.json())
         .then(
             (result) => {
