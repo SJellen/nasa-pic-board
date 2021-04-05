@@ -18,7 +18,8 @@ body {
   height: 5rem;
   top: 0;
   z-index: 9;
-  background-color: rgba(11, 61, 145, .985);
+  background-color: rgba(11, 61, 145, .95);
+  backdrop-filter: blur(15px);
 }
 
 nav {
