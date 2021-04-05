@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-function Footer() {
+export default function Footer() {
     return (
             <div className="footer">
                  <a href="https://scottjellen.com/" target="_blank" rel="noopener noreferrer">
@@ -15,6 +15,3 @@ function Footer() {
     )
 }
 
-
-
-export default Footer

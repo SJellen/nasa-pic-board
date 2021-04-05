@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink4 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2004-03-01&api_key=${apiKEY}`
 
-function Spirit() {
+export default function Spirit() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -140,14 +140,3 @@ function Spirit() {
     )
 }
 
-
-
-
-
-
-
-
-
-
-
-export default Spirit

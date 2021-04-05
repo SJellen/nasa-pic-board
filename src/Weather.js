@@ -11,7 +11,7 @@ const parseDate = (date) => {
     })
 }
 
-function Weather() {
+export default function Weather() {
     const [solIndex, setSolIndex] = useState(0)
     const [weather, setWeather] = useState([])
    
@@ -135,4 +135,3 @@ function Weather() {
 }
 
 
-export default Weather

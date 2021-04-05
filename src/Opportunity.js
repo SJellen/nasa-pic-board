@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink3 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2009-07-01&api_key=${apiKEY}`
 
-function Opportunity() {
+export default function Opportunity() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -146,12 +146,3 @@ function Opportunity() {
 
 
 
-
-
-
-
-
-
-
-
-export default Opportunity

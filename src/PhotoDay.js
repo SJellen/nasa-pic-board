@@ -8,7 +8,7 @@ const apiKEY = process.env.REACT_APP_NASA_API_KEY
 
 
 
-function PhotoDay() {
+export default function PhotoDay() {
    
     const [photoDay, setPhotoDay] = useState({
         link: '',
@@ -143,7 +143,3 @@ function PhotoDay() {
 
 }
 
-
-
-
-export default PhotoDay

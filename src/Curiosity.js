@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2017-01-01&api_key=${apiKEY}`
 
-function Curiosity() {
+export default function Curiosity() {
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -136,13 +136,3 @@ function Curiosity() {
 }
 
 
-
-
-
-
-
-
-
-
-
-export default Curiosity
