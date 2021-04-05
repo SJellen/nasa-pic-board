@@ -35,7 +35,7 @@ function App() {
               style={{display: show ? "none" : "block"}}
               >close_icon</i>
             <a href="#home" className="firstAnchor">Photo of the Day</a>
-            <a href="#weather">Mars Weather</a>
+            {/* <a href="#weather">Mars Weather</a> */}
             <a href="#curiosity">Curiosity Rover</a>
             <a href="#opportunity">Opportunity Rover</a>
             <a href="#spirit" className="lastAnchor">Spirit Rover</a> 
@@ -43,7 +43,7 @@ function App() {
     </div>
       
         <PhotoDay />
-        <Weather />
+        {/* <Weather /> */}
         <Rover />
         <Opportunity />
         <Spirit />
