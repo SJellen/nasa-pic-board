@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import {Context} from '../Context'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import usePhotoDayLogic from '../logic/usePhotoDayLogic'
@@ -7,9 +8,10 @@ import usePhotoDayLogic from '../logic/usePhotoDayLogic'
 export default function PhotoDay() {
    
     const {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, photoDay} = usePhotoDayLogic()
+    const {currentImage} = useContext(Context)
 
     return (
-            <div className="photo-day-container">
+            <div className="photo-day-container" style={{display: currentImage !== undefined ? 'none' : ''}}>
              <h1 className="section-title">Astronomy Picture of the Day</h1>
                  <div className="search-apod" >
                     <DatePicker

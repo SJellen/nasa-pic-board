@@ -22,6 +22,27 @@ body {
   backdrop-filter: blur(15px);
 }
 
+
+.closeHeader {
+  display: flex;
+  height: 5rem;
+  width: 100%;
+  position: absolute;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.closeIconHeader {
+  fill: white;
+  margin-right: 2rem;
+}
+
+.closeIconHeader:hover {
+  cursor: pointer;
+}
+
 nav {
   margin-top: -5.25rem;
   margin-right: 20.5rem;
@@ -226,7 +247,7 @@ iframe {
 }
 
 .gallery-imageCurrent {
-  min-width: 90%;
+  min-width: 80%;
   margin: 0 auto;
   height: auto;
 }
@@ -290,7 +311,7 @@ iframe {
 }
 
 #curiosity, #opportunity, #spirit {
-   padding-top: 7.5rem;
+   padding-top: 5rem;
 }
 
 
