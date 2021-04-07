@@ -27,7 +27,7 @@ export default function useCuriosityLogic() {
         .catch(error => console.log(error))
     }, [])
 
-    function newRequest(newDate){
+    function newRequest(){
         const newDateLink = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${newDate}&api_key=${apiKEY}`
         fetch(newDateLink)
         .then(res => res.json())
