@@ -1,9 +1,12 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
+import {Context} from '../Context'
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink3 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?earth_date=2009-07-01&api_key=${apiKEY}`
 
 export default function  useOpportunityLogic() {
+
+    const {currentImage, setCurrentImage, handleImageClick} = useContext(Context)
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -69,7 +72,7 @@ export default function  useOpportunityLogic() {
     
     const photoMap = slice.map((i) => (
        
-        <img src={i.img_src} alt="mars rover" key={i.id}/>
+        <img src={i.img_src} alt="mars rover" key={i.id} onClick={(e) => handleImageClick(e)}/>
     ))
 
     function dateConversion() {

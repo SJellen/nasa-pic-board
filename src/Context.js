@@ -20,7 +20,7 @@ function ContextProvider({ children }) {
 
 
 
-
+    console.log(currentImage)
 
 
 
