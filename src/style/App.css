@@ -212,6 +212,33 @@ iframe {
   padding: .5rem;
 }
 
+
+ 
+.gallery-image {
+  width: 175px;
+  height: auto;
+  padding: 5px;
+  
+}
+
+.gallery-image:hover {
+  cursor: pointer;
+}
+
+.gallery-imageCurrent {
+  min-width: 90%;
+  margin: 0 auto;
+  height: auto;
+}
+
+.gallery-imageCurrent:hover {
+  cursor: pointer;
+}
+
+.gallery-none {
+  display: none;
+}
+
 .select-box {
   display: flex;
   justify-content: space-between;

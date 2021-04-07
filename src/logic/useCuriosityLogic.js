@@ -6,7 +6,7 @@ const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photo
 
 export default function useCuriosityLogic() {
 
-    const {handleImageClick} = useContext(Context)
+    const {handleImageClick, currentImage} = useContext(Context)
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -64,7 +64,10 @@ export default function useCuriosityLogic() {
     let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
     
     const photoMap = slice.map((i) => (
-        <img src={i.img_src} alt="mars rover" key={i.id} onClick={(e) => handleImageClick(e)}/>
+       
+            <img src={i.img_src} alt="mars rover" key={i.id} className={currentImage && currentImage?.src === i.img_src ? "gallery-imageCurrent" : currentImage && currentImage?.src !== i.img_src ? "gallery-none" : 'gallery-image'} onClick={(e) => handleImageClick(e)}/> 
+        
+        
     ))
 
 
