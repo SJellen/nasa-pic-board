@@ -1,6 +1,6 @@
 import React from 'react';
-import useToggler from './useToggler'
-import './App.css';
+import useToggler from '../useToggler'
+import '../style/App.css';
 
 export default function Header() {
 

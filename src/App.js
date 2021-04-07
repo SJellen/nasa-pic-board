@@ -1,12 +1,12 @@
 import React from 'react';
-import PhotoDay from './PhotoDay'
-import './App.css';
-import Rover from './Curiosity'
-import Opportunity from './Opportunity'
-import Spirit from './Spirit';
+import PhotoDay from './components/PhotoDay'
+import '../src/style/App.css';
+import Rover from './components/Curiosity'
+import Opportunity from './components/Opportunity'
+import Spirit from './components/Spirit';
 // import Weather from './Weather'
-import Footer from './Footer'
-import Header from './Header'
+import Footer from './components/Footer'
+import Header from './components/Header'
 
 
 
