@@ -1,15 +1,15 @@
-import React, {useState, useEffect, useContext} from 'react'
+import React from 'react'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useCuriosityLogic from '../logic/useCuriosityLogic'
-import {Context} from '../Context'
+
 
 
 
 export default function Curiosity() {
 
     const {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, handleImageSubmit, amountShown, handleImageChange, photoMap} = useCuriosityLogic()
-    const {currentImage, setCurrentImage, handleImageClick} = useContext(Context)
+    
 
     return (
         <div className="rover-container" id="curiosity">

@@ -6,7 +6,7 @@ const APIlink3 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/pho
 
 export default function  useOpportunityLogic() {
 
-    const {currentImage, setCurrentImage, handleImageClick} = useContext(Context)
+    const {handleImageClick} = useContext(Context)
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)

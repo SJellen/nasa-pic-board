@@ -6,7 +6,7 @@ const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photo
 
 export default function useCuriosityLogic() {
 
-    const {currentImage, setCurrentImage, handleImageClick} = useContext(Context)
+    const {handleImageClick} = useContext(Context)
 
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
@@ -52,7 +52,6 @@ export default function useCuriosityLogic() {
         setNewDate(
             date.toISOString().slice(0, 10)
          )
-         console.info(newDate)
          newRequest(date.toISOString().slice(0, 10))
     }
 
