@@ -25,9 +25,10 @@ body {
 
 .closeHeader {
   display: flex;
-  height: 5rem;
-  width: 100%;
-  position: absolute;
+  height: auto;
+  margin: 2rem auto -7rem auto;
+  width: 57.5%;
+  position: relative;
   z-index: 99;
   display: flex;
   justify-content: flex-end;
@@ -35,8 +36,10 @@ body {
 }
 
 .closeIconHeader {
+  display: flex;
+ 
   fill: white;
-  margin-right: 2rem;
+  margin-right: .5rem;
 }
 
 .closeIconHeader:hover {
@@ -225,6 +228,7 @@ iframe {
 .rover-photo-box {
   width:90%;
   margin: 2rem auto;
+  
 }
 
 .rover-photo-box > img {
@@ -247,7 +251,7 @@ iframe {
 }
 
 .gallery-imageCurrent {
-  min-width: 80%;
+  min-width: 50%;
   margin: 0 auto;
   height: auto;
 }
@@ -773,6 +777,10 @@ iframe {
   .section-title {
     width: 80%;
     margin: 1rem auto;
+  }
+
+  .closeHeader {
+    width: 85%;
   }
 
   nav {

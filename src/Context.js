@@ -12,6 +12,7 @@ function ContextProvider({ children }) {
         }
         else if (e.target !== currentImage) {
             setCurrentImage(e.target)
+            window.scrollTo(0, 0)
         } else {
             setCurrentImage()
         }
