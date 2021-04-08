@@ -9,11 +9,11 @@
   </a>
 </p>
 
-> A page to browse NASA images on the NASA API. Astronomy Photo of the Day, Martian Weather, and 3 Mars Rovers.
+> A page to browse NASA images on the NASA API. Astronomy Photo of the Day, and 3 Mars Rovers.
 
-### 🏠 [Homepage](https://youthful-yonath-b6a4b7.netlify.app/)
+### 🏠 [Homepage](https://nasa-pic-board.vercel.app/)
 
-### ✨ [Demo](https://youthful-yonath-b6a4b7.netlify.app/)
+### ✨ [Demo](https://nasa-pic-board.vercel.app/)
 
 ## Install
 
