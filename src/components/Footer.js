@@ -1,7 +1,6 @@
 import React, {useContext} from 'react'
 import {Context} from '../Context'
 
-
 export default function Footer() {
 
     const {currentImage} = useContext(Context)

@@ -25,9 +25,9 @@ export default function Header() {
                                     >close_icon</i>
                                     <a href="#home" className="firstAnchor">Photo of the Day</a>
                                     {/* <a href="#weather">Mars Weather</a> */}
-                                    <a href="#curiosity">Curiosity Rover</a>
-                                    <a href="#opportunity">Opportunity Rover</a>
-                                    <a href="#spirit" className="lastAnchor">Spirit Rover</a> 
+                                    <a href="#curiosity">Curiosity</a>
+                                    <a href="#opportunity">Opportunity</a>
+                                    <a href="#spirit" className="lastAnchor">Spirit</a> 
                                 </nav>
                         </div> :
                         <div className="closeHeader">
