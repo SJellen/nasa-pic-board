@@ -54,41 +54,22 @@ export default function Weather() {
         )
         .catch(error => console.log(error))
     }, [solIndex])
-
-
-  
-
-        
+ 
     function handleDecrement() {
         
         if(solIndex >= 0) {
-            setSolIndex(solIndex - 1) 
-           
-        }
-        
+            setSolIndex(solIndex - 1)    
+        } 
     }
 
     function handleIncrement() {
-        
         if(solIndex <= 5) {
             setSolIndex(solIndex + 1) 
-
         }
-        
     }
-    
-    
-
-
-   
-
-   
-    
     return (
-        
         <div id="weather">
             <h1 className="section-title" >Latest Weather at Elysium Planitia</h1>
-            
             <div className="insight-container">
             <img src="../insight.jpg" alt="insight" className="insight-image"/>
             <div className="weather-word-container">
@@ -105,8 +86,6 @@ export default function Weather() {
             { weather.date && 
                 <h2>{parseDate(weather.date)}</h2>
             }
-               
-                
                 <h3>Temperature</h3>
                { weather.maxTemp && 
                    <p>Hi:<br></br>
@@ -117,18 +96,11 @@ export default function Weather() {
                     <p>Low:<br></br>
                 {Math.round( weather.minTemp)}&#8451;  {Math.round( weather.minTemp * 9 / 5 + 32)}&#8457;</p>
                }
-               
-
                 <h3>Wind</h3>
                 <p>{weather.windDirectionDegrees && weather.windDirectionDegrees} &#xb0;</p>
                 <p>{weather.windSpeed && weather.windSpeed.toFixed(2)} KPH</p>
-                
             </div>}
-
-
             <a href="https://mars.nasa.gov/insight/" target="_blank" rel="noopener noreferrer" className="material-icons exit-to-insight">exit_to_app_rounded_icon</a>
-            
-
             </div>
         </div>
     )

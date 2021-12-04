@@ -4,9 +4,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useCuriosityLogic from '../logic/useCuriosityLogic'
 
-
-
-
 export default function Curiosity() {
 
     const {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, handleImageSubmit, amountShown, handleImageChange, photoMap} = useCuriosityLogic()

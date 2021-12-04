@@ -4,7 +4,6 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import usePhotoDayLogic from '../logic/usePhotoDayLogic'
 
-
 export default function PhotoDay() {
    
     const {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, photoDay} = usePhotoDayLogic()
