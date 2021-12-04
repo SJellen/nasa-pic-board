@@ -13,12 +13,23 @@ export default function Header() {
         <div>
             {   currentImage === undefined ? 
                 <div className="header">
+                    
                     <h1 className="title">Nasa Navigator</h1>
+                    <div className="nav">
+                       <nav>
+                        <a href="#home" className="firstAnchor">Photo of the Day</a>
+                        {/* <a href="#weather">Mars Weather</a> */}
+                        <a href="#curiosity">Curiosity</a>
+                        <a href="#opportunity">Opportunity</a>
+                        <a href="#spirit" className="lastAnchor">Spirit</a> 
+                    </nav> 
+                    </div>
+                    <div className="mobile-nav-container" >
                         <i className="material-icons menu-icon" 
                             onClick={toggle}
                             style={{ display: show ? "block" : "none"}}
                             >menu_icon</i>
-                                <nav style={{display: show ? "none" : "block"}}>
+                                <nav style={{display: show ? "none" : "block"}} className="mobile-nav">
                                 <i className="material-icons close-icon"
                                     onClick={toggle}
                                     style={{display: show ? "none" : "block"}}
@@ -29,6 +40,8 @@ export default function Header() {
                                     <a href="#opportunity">Opportunity</a>
                                     <a href="#spirit" className="lastAnchor">Spirit</a> 
                                 </nav>
+                    </div>
+                        
                         </div> :
                         <div className="closeHeader">
                             <svg className="closeIconHeader" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" onClick={(e) => handleImageClick(e)}
