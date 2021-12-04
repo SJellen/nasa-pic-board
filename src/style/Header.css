@@ -1,0 +1,270 @@
+
+
+
+.header {
+    width: 100%;
+    position: fixed;
+    height: 5rem;
+    top: 0;
+    z-index: 9;
+    background-color: rgba(11, 61, 145, .95);
+    backdrop-filter: blur(15px);
+  }
+  
+  
+  .closeHeader {
+    display: flex;
+    height: auto;
+    margin: 2rem auto -7rem auto;
+    width: 57.5%;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .closeIconHeader {
+    display: flex;
+   
+    fill: white;
+    margin-right: .5rem;
+  }
+  
+  .closeIconHeader:hover {
+    cursor: pointer;
+  }
+  
+  nav {
+    margin-top: -5.25rem;
+    margin-right: 20.5rem;
+    z-index: 99;
+    position: relative;
+    border-right: 1px solid white;
+    padding-bottom: 2rem;
+    background-color: #10316b;
+  }
+  
+  
+  
+  a {
+    display: inline;
+    text-decoration: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding: 2rem;
+    position: relative;
+    z-index: 99;
+    
+    
+  }
+  
+  a:hover {
+    cursor: pointer;
+    transition: .5s ease-in;
+    color:  silver;
+  }
+  
+  .menu-icon {
+    font-size: 2.5rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 40px;
+  }
+  
+  .menu-icon:hover {
+    cursor: pointer;
+    color:  silver;
+    transition: .5s ease-in;
+  }
+  
+  
+  
+  .close-icon {
+    font-size: 2rem;
+    display: block;
+    position: relative;
+    top: 1.5rem;
+    left: 2rem;
+    width: 40px;
+    z-index: 9;
+  }
+  
+  .close-icon:hover {
+    cursor: pointer;
+    color:  silver;
+    transition: .5s ease-in;
+  }
+
+  @media only screen and (min-width: 1500px) {
+    .header {
+      width: 100%;
+      margin-left: -12.5%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+    a {
+      padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .title {
+        font-size: 1.75rem;
+        margin-right: 1.75rem;
+      }
+    nav {
+      margin-top: -4.55rem;
+      margin-right: 17.5rem;
+    }
+  
+    a {
+      padding: .75rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 1050px) {
+    .title {
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      margin-right: 1.75rem;
+    }
+  
+    nav {
+      margin-top: -4.4rem;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  
+    .header {
+      max-width: 100%;
+    }
+    a {
+      padding: 0 1rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 900px) {
+
+    a {
+      font-size: .9rem;
+    }
+  
+    .firstAnchor {
+      margin-left: 3rem;
+    }
+  }
+
+
+
+@media only screen and (max-width: 750px) {
+  
+
+    nav {
+      
+      background-color:rgba(16,49,107, .975);
+      width: 300px;
+      height: 235px;
+      top: 0rem;
+      left: 0rem;
+      padding-top: 2rem;
+      position: relative;
+      z-index: 9;
+      border: none;
+      border-bottom-right-radius: 15px;
+    }
+  
+    .firstAnchor {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  
+    nav > a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 1rem;
+    }
+  
+    nav > a:hover {
+      transition: .5s ease-in;
+      background-color: rgba(11, 61, 145, .975);
+      
+    }
+  
+    .lastAnchor {
+      border-bottom-right-radius: 15px;
+    }
+  
+    .menu-icon {
+      font-size: 2.5rem;
+      display: block;
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      width: 40px;
+    }
+    
+    .menu-icon:hover {
+      cursor: pointer;
+      transition: .5s ease-in;
+      color: silver;
+    }
+  
+  
+  .close-icon {
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 40px;
+  } 
+  .close-icon:hover {
+    cursor: pointer;
+    color: rgba(11, 61, 145, .975);
+    transition: .5s ease-in;
+  }
+  
+  }
+
+  @media only screen and (max-width: 500px) {
+    .header {
+      max-width: 100vw;
+    }
+  }
+
+
+  @media only screen and (max-width: 425px) {
+  
+    .closeHeader {
+      width: 85%;
+    }
+  
+    nav {
+      width: 100vw;
+      border-bottom-left-radius: 15px;
+    }
+  
+    .lastAnchor {
+      border-bottom-left-radius: 15px;
+    }
+  
+  }
+
+
+
+@media only screen and (max-width: 376px) {
+  }

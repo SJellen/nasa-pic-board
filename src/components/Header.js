@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import useToggler from '../useToggler'
-import '../style/App.css';
+import '../style/Header.css';
 import {Context} from '../Context'
 
 export default function Header() {
