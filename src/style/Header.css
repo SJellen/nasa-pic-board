@@ -38,7 +38,7 @@
   }
  
   .nav {
-    padding: 1.85rem 0;
+    padding: 1.85rem 0 1.85rem 1rem;
     width: 500px;
     display: flex;
     border-right: 1px solid white;
@@ -90,6 +90,8 @@
     .nav {
         background-color: transparent;
         border: none;
+        padding: 0;
+        margin-left: 1rem;
     }
   
     .header {
@@ -122,6 +124,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin-left: 0;
     }
   }
 
