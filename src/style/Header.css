@@ -176,9 +176,10 @@
     .title {
         display: flex;
         position: absolute;
+        height: 25px;
         top: 0;
         right: 0;
-        height: auto;
+  
     }
 
     .menu-icon {
