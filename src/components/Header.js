@@ -39,9 +39,9 @@ export default function Header() {
                                     <a href="#curiosity">Curiosity</a>
                                     <a href="#opportunity">Opportunity</a>
                                     <a href="#spirit" className="lastAnchor">Spirit</a> 
-                                </nav>
+                                    <div className="blade"></div>
+                                </nav>        
                     </div>
-                        
                         </div> :
                         <div className="closeHeader">
                             <svg className="closeIconHeader" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" onClick={(e) => handleImageClick(e)}
