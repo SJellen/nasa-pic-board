@@ -142,25 +142,42 @@
     }
     .mobile-nav {
         display: block;
-        background-color: rgba(11, 61, 145, .975);
+        background-color: rgba(11, 61, 145, .99);
         backdrop-filter: blur(15px);
         position: absolute;
         top: 0;
         left: 0;
         width: 100vw;
-        height: 300px;
+        height: 280px;
         padding-top: 2rem;
+        
+    }
+
+    .blade {
+      z-index: 0;
+      display: block;
+      background-color: rgba(11, 61, 145, .99);
+        backdrop-filter: blur(15px);
+      position: absolute;
+      top: 0px;
+      left: -10%;
+      width: 110vw;
+      height: 340px;
+      padding-top: 2rem;
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg);
     }
 
     a {
         display: flex;
         flex-direction: column;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
     }
     .title {
         display: flex;
         position: absolute;
         right: 0;
+        height: auto;
     }
 
     .menu-icon {
@@ -198,7 +215,5 @@
 .closeHeader {
     width: 80vw;
   }
-  
-
   }
 
