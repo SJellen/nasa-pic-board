@@ -35,69 +35,8 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.photo-day-container {
-  margin: 10rem 0 10rem 0;
-  
-}
-
-.photoDay {
-  margin-top: 5rem;
-}
-
 .rover-container {
   margin: 7.5rem 0;
-}
-
-
-.photo-of-the-day {
-  padding: 2rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-  margin: 2rem auto;
-  
-}
-
-.apod-image {
-  width: 50%;
-  height: auto;
-  max-height: 70vh;
-  margin-left: 3.5rem;
-}
-
-.apod-title {
-  font-size: 1.5rem;
-}
-
-iframe {
- margin: 0 auto;
- width: 50%;
- min-height: 300px;
- 
-}
-
-.apod-explanation {
-  font-size: .9rem;
-  width: 90%;
-  margin: 0 auto;
-  text-align: left;
-  line-height: 1.5;
-  color: #eeeeee;
-}
-
-.search-apod {
-  display: flex;
-  width: 40%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: space-around;
-  
-}
-
-.apod-word-box {
-  margin: 0 auto;
-  max-width: 40%;
-  height: auto;
 }
 
 
@@ -123,8 +62,6 @@ iframe {
   color: #f64b3c;
 }
 
-
-
 .rover-photo-box {
   width:90%;
   margin: 2rem auto;
@@ -137,13 +74,10 @@ iframe {
   padding: .5rem;
 }
 
-
- 
 .gallery-image {
   width: 175px;
   height: auto;
   padding: 5px;
-  
 }
 
 .gallery-image:hover {
@@ -267,8 +201,6 @@ iframe {
   font-weight: 500;
 }
 
-
-
 .sol-box {
   display: flex;
   flex-direction: row;
@@ -324,9 +256,7 @@ iframe {
   background-color: transparent;
 }
 
-
 @media only screen and (min-width: 1500px) {
-
     body {
       max-width: 75%;
       margin: 0 auto;
@@ -334,8 +264,6 @@ iframe {
 }
 
 @media only screen and (max-width: 1300px) {
-
-
   .insight-image {
     width: 100%;
   }
@@ -346,8 +274,6 @@ iframe {
 }
 
 @media only screen and (max-width: 1200px) {
-
-
   .select-box {
     width: 100%;
   }
@@ -361,31 +287,6 @@ iframe {
   .App {
     max-width: 100%;
     overflow-x: hidden;
-  }
-
-  .photo-of-the-day {
-    flex-direction: column;
-    width: 90%;
-  }
-
-  .search-apod {
-    width: 50%;
-  }
-
-  .apod-image {
-    width: 75%;
-    margin: 0 auto;
-  }
-
-  iframe {
-    width: 75%;
-    min-height: 500px;
-  }
-
-  .apod-word-box {
-    max-width: 90%;
-    padding-top: 2rem;
-    
   }
 
   .insight-container {
@@ -417,19 +318,7 @@ iframe {
 }
 
 
-
 @media only screen and (max-width: 900px) {
-
-  .photo-of-the-day {
-    display: flex;
-    flex-direction: column;
-  }
-  .apod-image {
-    width: 100%;
-  }
-  .apod-word-box {
-    width: 100%;
-  }
 
   .weather-box {
    margin-left: 0rem;
@@ -470,14 +359,8 @@ iframe {
  
 }
 
-
-
 @media only screen and (max-width: 750px) {
  
-.search-apod {
-  width: 80%;
-}
-
 .weather-box {
   transform: scale(.6);
   margin-top: -27.5rem;
@@ -531,18 +414,8 @@ iframe {
     overflow-x: hidden;
   }
 
-  .search-apod {
-    flex-direction: column;
-    width: 60%;
-    height: 50px;
-  }
   .section-title {
    font-size: 1.35rem;
-  }
-
-  iframe {
-    width: 90%;
-    min-height: 300px;
   }
 
 }
@@ -556,8 +429,6 @@ iframe {
     width: 80%;
     margin: 1rem auto;
   }
-
-
   .weather-word-container {
     margin-top: -1rem;
     margin-left: -26rem;
@@ -583,18 +454,13 @@ iframe {
   .section-title {
     width: 70%;
   }
-
-  .apod-title {
-    font-size: 1.25rem;
-  }
-
+  
   .insight-image {
     margin-top: 10rem;
   }
 
   .weather-box {
     margin-top: -30rem;
-   
   }
 
   .weather-word-container {

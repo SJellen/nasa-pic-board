@@ -3,6 +3,7 @@ import {Context} from '../Context'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import usePhotoDayLogic from '../logic/usePhotoDayLogic'
+import '../style/PhotoDay.css'
 
 export default function PhotoDay() {
    

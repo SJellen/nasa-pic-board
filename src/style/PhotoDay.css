@@ -1,0 +1,123 @@
+
+  .photo-day-container {
+    margin: 10rem 0 10rem 0;
+  }
+  
+  .photoDay {
+    margin-top: 5rem;
+  }
+
+  .photo-of-the-day {
+    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2rem auto;
+ }
+  
+  .apod-image {
+    width: 50%;
+    height: auto;
+    max-height: 70vh;
+    margin-left: 3.5rem;
+ }
+  
+  .apod-title {
+    font-size: 1.5rem;
+  }
+  
+  iframe {
+   margin: 0 auto;
+   width: 50%;
+   min-height: 300px;
+  }
+  
+  .apod-explanation {
+    font-size: .9rem;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.5;
+    color: #eeeeee;
+  }
+  
+  .search-apod {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .apod-word-box {
+    margin: 0 auto;
+    max-width: 40%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 1050px)  {
+
+  .photo-of-the-day {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .search-apod {
+    width: 50%;
+  }
+
+  .apod-image {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  iframe {
+    width: 75%;
+    min-height: 500px;
+  }
+
+  .apod-word-box {
+    max-width: 90%;
+    padding-top: 2rem;
+    
+  }
+  }
+
+  @media only screen and (max-width: 900px) {
+
+  .photo-of-the-day {
+    display: flex;
+    flex-direction: column;
+  }
+  .apod-image {
+    width: 100%;
+  }
+  .apod-word-box {
+    width: 100%;
+  }
+
+  }
+
+  @media only screen and (max-width: 750px) {
+    .search-apod {
+        width: 80%;
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .search-apod {
+        flex-direction: column;
+        width: 60%;
+        height: 50px;
+      }
+      iframe {
+        width: 90%;
+        min-height: 300px;
+      }
+  }
+
+  @media only screen and (max-width: 376px)  {
+    .apod-title {
+        font-size: 1.25rem;
+      }
+  }
