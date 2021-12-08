@@ -324,26 +324,6 @@ iframe {
   background-color: transparent;
 }
 
-.footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-.logo {
-  border-radius: 50%;
-  width: 50px;
-  margin-left: 1.5rem;
-  margin-top: .5rem;
-  box-shadow: 3px 0px .5px .5px rgba(29,60,138,1);
-}
-
-.logo:hover {
-  box-shadow: 3px 0px .5px .5px rgba(255, 172, 65, 1);
-  transition: 1s ease-in;
-}
-
 
 @media only screen and (min-width: 1500px) {
 
@@ -426,9 +406,6 @@ iframe {
     margin-right: 2rem;
   }
 
-  .footer {
-    padding-bottom: 1rem;
-  }
   .weather-box {
     transform: scale(.75);
   }
@@ -443,8 +420,6 @@ iframe {
 
 @media only screen and (max-width: 900px) {
 
-  
-  
   .photo-of-the-day {
     display: flex;
     flex-direction: column;
