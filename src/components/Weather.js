@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import '../style/Weather.css'
 
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 const APIlink5 = `https://api.nasa.gov/insight_weather/?api_key=${apiKEY}&feedtype=json&ver=1.0`

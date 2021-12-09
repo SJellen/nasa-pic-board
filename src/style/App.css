@@ -158,11 +158,6 @@ body {
 }
 
 
-
-#weather {
-   padding-top: 1rem;
-}
-
 #home {
   padding-top: .5rem;
 }
@@ -171,73 +166,6 @@ body {
    padding-top: 5rem;
 }
 
-
-.weather-box {
-  margin-top: -35rem;
-  margin-left: 5rem;
-  padding: 2rem 0;
-  width: 200px;
-  z-index: 3;
-  background-color: rgba(22, 22, 22, .75);
-  border-radius: 25px;
-  transform: scale(.90);
-}
-
-.weather-word-container {
-  text-shadow: 2px 2px 0px rgba(22, 22, 22, .75);
-  max-width: 500px;
-  margin: 0 auto;
-  position: absolute;
-  z-index: 3;
-  top: 2.5rem;
-  left: 25rem;
-  text-align: center;
-  border-radius: 5px;
-  background-color: rgba(22, 22, 22, .75);
-}
-
-.weather-word-container h2 {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-
-.sol-box {
-  display: flex;
-  flex-direction: row;
-  margin-left: 2rem;
-}
-
-.left {
-  margin-top: 1.5rem;
-}
-
-.left:hover {
-  cursor: pointer;
-}
-
-.right {
-  margin-top: 1.5rem;
-}
-
-.right:hover {
-  cursor: pointer;
-}
-
-.exit-to-insight {
-  float: right;
-  z-index: 3;
-  width: 25px;
-  margin-top: -5rem;
-  margin-right: 6rem;
-  font-size: 3rem;
-  text-decoration: none;
-  color: rgb(235, 229, 229);
-  text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
-}
-
-.exit-to-insight:hover {
-  background-color: transparent;
-}
 
 .exit-to-rover {
   position: relative;
@@ -263,15 +191,6 @@ body {
     }
 }
 
-@media only screen and (max-width: 1300px) {
-  .insight-image {
-    width: 100%;
-  }
-  .weather-box {
-    margin-left: 3rem;
-  }
-
-}
 
 @media only screen and (max-width: 1200px) {
   .select-box {
@@ -289,15 +208,6 @@ body {
     overflow-x: hidden;
   }
 
-  .insight-container {
-    width: 97.5%;
-  }
-
-  .exit-to-insight {
-    margin-top: -3rem;
-    margin-right: 4rem;
-  }
-
   .rover-photo-box {
     width: 100%;
   }
@@ -306,34 +216,10 @@ body {
     margin-top: .5rem;
     margin-right: 2rem;
   }
-
-  .weather-box {
-    transform: scale(.75);
-  }
-
-  .weather-word-container {
-    transform: scale(.85);
-   
-  }
 }
 
 
 @media only screen and (max-width: 900px) {
-
-  .weather-box {
-   margin-left: 0rem;
-   margin-top: -30rem;
-  }
-
-  .weather-word-container {
-   margin-left: -10rem;
-  }
-
-  .exit-to-insight {
-    font-size: 2rem;
-    margin-top: -7.5rem;
-  }
-
   .exit-to-rover {
     font-size: 2rem;
     margin-right: 1rem;
@@ -360,24 +246,6 @@ body {
 }
 
 @media only screen and (max-width: 750px) {
- 
-.weather-box {
-  transform: scale(.6);
-  margin-top: -27.5rem;
-  margin-left: -1rem;
-}
-
-.weather-word-container {
-  transform: scale(.75);
-  width: 100%;
-  margin-left: -18rem;
-  margin-top: -2rem;
-}
-
-.exit-to-insight {
-  margin-right: 1rem;
-  
-}
 
 .rover-photo-box > img {
   width: 40%;
@@ -389,20 +257,6 @@ body {
 
 }
 
-
-@media only screen and (max-width: 600px) {
-    .insight-image {
-      width: 200%;
-    }
-    .insight-container {
-      width: 100vw;
-      overflow: hidden;
-    }
-    .weather-word-container {
-      margin-top: 1.5rem;
-      margin-left: -25rem;
-    }
-}
 
 @media only screen and (max-width: 500px) {
   .App {
@@ -429,18 +283,7 @@ body {
     width: 80%;
     margin: 1rem auto;
   }
-  .weather-word-container {
-    margin-top: -1rem;
-    margin-left: -26rem;
-     width: 100%;
-     text-align: left;
-     padding: 1rem;
-  }
-
-  .exit-to-insight {
-    margin-right: .15rem;
-  }
-
+ 
 .rover-photo-box > img {
   width: 80%;
 }
@@ -453,22 +296,5 @@ body {
 @media only screen and (max-width: 376px) {
   .section-title {
     width: 70%;
-  }
-  
-  .insight-image {
-    margin-top: 10rem;
-  }
-
-  .weather-box {
-    margin-top: -30rem;
-  }
-
-  .weather-word-container {
-    margin-top: -3rem;
-  }
-
-  .exit-to-insight {
-    margin-top: 1rem;
-    margin-right: 1rem;
   }
 }
