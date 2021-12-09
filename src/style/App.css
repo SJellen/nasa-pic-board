@@ -9,14 +9,6 @@ body {
   color: white;
   max-width: 100%;
   overflow-x: hidden;
-  
-}
-
-.title {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 2.5rem;
-  color: #dddddd;
 }
 
 .date-picker {
@@ -27,7 +19,6 @@ body {
   padding-left: 15px;
 }
 
-
 .section-title {
   font-size: 1.75rem;
   text-align: center;
@@ -35,154 +26,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.rover-container {
-  margin: 7.5rem 0;
-}
-
-
-.mission-box {
-  text-align: left;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  width: 75%;
-  margin: 0 auto 2rem auto;
-}
-
-.launch {
-  color: #639a67;
-}
-
-.missing {
-  color: #fbe555;
-}
-
-.death {
-  color: #f64b3c;
-}
-
-.rover-photo-box {
-  width:90%;
-  margin: 2rem auto;
-  
-}
-
-.rover-photo-box > img {
-  width: 22%;
-  height: auto;
-  padding: .5rem;
-}
-
-.gallery-image {
-  width: 175px;
-  height: auto;
-  padding: 5px;
-}
-
-.gallery-image:hover {
-  cursor: pointer;
-}
-
-.gallery-imageCurrent {
-  min-width: 50%;
-  margin: 0 auto;
-  height: auto;
-}
-
-.gallery-imageCurrent:hover {
-  cursor: pointer;
-}
-
-.gallery-none {
-  display: none;
-}
-
-.select-box {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 0 auto;
-}
-
-
-.search-box-rover {
-  display: flex;
-  margin-left: 8rem;
-  width: fit-content;
-  margin-bottom: -1rem;
-  
-}
-
-.current-selected-date {
-  color: #eae9e9;
-}
-
-.select-box-rover {
-  margin-right: 8rem;
-  margin-bottom: -1rem;
-}
-
-.image-label {
-  margin-right: 1rem;
-}
-
-.insight-container {
-  margin: 0 auto;
-  width: 90%;
-  position: relative;
-}
-
-.insight-image {
-  margin: 1rem 0 3rem 0;
-  width: 90%;
-  
-}
-
-
-.close-icon {
-  fill: red;
-  font-size: 2rem;
-  display: block;
-  position: relative;
-  top: 1.5rem;
-  left: 2rem;
-  width: 40px;
-  z-index: 9;
-}
-
-.close-icon:hover {
-  cursor: pointer;
-  color:  silver;
-  transition: .5s ease-in;
-}
-
-
-#home {
-  padding-top: .5rem;
-}
-
-#curiosity, #opportunity, #spirit {
-   padding-top: 5rem;
-}
-
-
-.exit-to-rover {
-  position: relative;
-  font-size: 2.5rem;
-  text-decoration: none;
-  color: rgb(235, 229, 229);
-  text-shadow: 1px 1px 1px rgba(22, 22, 22, .75);
-  display: block;
-  width: 25px;
-  float: right;
-  margin-right: 6.5rem;
-  margin-top: -2.5rem;
-  z-index: 1;
-}
-.exit-to-rover:hover {
-  background-color: transparent;
-}
 
 @media only screen and (min-width: 1500px) {
     body {
@@ -191,59 +34,13 @@ body {
     }
 }
 
-
-@media only screen and (max-width: 1200px) {
-  .select-box {
-    width: 100%;
-  }
-  .mission-box {
-    width: 100%;
-  }
-}
-
-
 @media only screen and (max-width: 1050px) {
   .App {
     max-width: 100%;
     overflow-x: hidden;
   }
-
-  .rover-photo-box {
-    width: 100%;
-  }
-
-  .exit-to-rover {
-    margin-top: .5rem;
-    margin-right: 2rem;
-  }
 }
 
-
-@media only screen and (max-width: 900px) {
-  .exit-to-rover {
-    font-size: 2rem;
-    margin-right: 1rem;
-  }
-
-  .mission-box {
-    flex-direction: column;
-  }
-
-  .select-box  {
-    height: 100px;
-    flex-direction: column;
-    align-items: center;
-   
-  }
-  .search-box-rover {
-    margin-left: 0;
-  }
-
-  .select-box-rover {
-    margin-right: 0;
-  }
- 
-}
 
 @media only screen and (max-width: 750px) {
 
@@ -254,9 +51,7 @@ body {
   margin-right: 3rem;
   float: right;
 }
-
 }
-
 
 @media only screen and (max-width: 500px) {
   .App {
@@ -271,7 +66,6 @@ body {
   .section-title {
    font-size: 1.35rem;
   }
-
 }
 
 @media only screen and (max-width: 425px) {
@@ -283,14 +77,6 @@ body {
     width: 80%;
     margin: 1rem auto;
   }
- 
-.rover-photo-box > img {
-  width: 80%;
-}
-
-.exit-to-rover {
-  margin-right: 1.5rem;
-}
 }
 
 @media only screen and (max-width: 376px) {

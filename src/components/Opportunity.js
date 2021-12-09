@@ -3,6 +3,7 @@ import {Context} from '../Context'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useOpportunityLogic from '../logic/useOpportunityLogic'
+import '../style/Rover.css'
 
 
 export default function Opportunity() {

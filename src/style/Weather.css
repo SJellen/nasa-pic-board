@@ -13,6 +13,17 @@
     border-radius: 25px;
     transform: scale(.90);
   }
+
+  .insight-container {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+  }
+  
+  .insight-image {
+    margin: 1rem 0 3rem 0;
+    width: 90%;
+  }
   
   .weather-word-container {
     text-shadow: 2px 2px 0px rgba(22, 22, 22, .75);

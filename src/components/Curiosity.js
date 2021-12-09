@@ -3,6 +3,7 @@ import {Context} from '../Context'
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import useCuriosityLogic from '../logic/useCuriosityLogic'
+import '../style/Rover.css'
 
 export default function Curiosity() {
 
