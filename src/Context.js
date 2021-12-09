@@ -18,15 +18,6 @@ function ContextProvider({ children }) {
         }
     }
 
-
-
-
-    console.log(currentImage)
-
-
-
-
-
     return (
         <Context.Provider value={{currentImage, setCurrentImage, handleImageClick}} >
             { children }

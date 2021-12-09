@@ -28,7 +28,6 @@
   .rover-photo-box {
     width:90%;
     margin: 2rem auto;
-    
   }
   
   .rover-photo-box > img {
@@ -41,6 +40,7 @@
     width: 175px;
     height: auto;
     padding: 5px;
+
   }
   
   .gallery-image:hover {
@@ -146,6 +146,10 @@
     .rover-photo-box {
       width: 100%;
     }
+
+    .gallery-imageCurrent {
+      min-width: 90vw;
+    }
   
     .exit-to-rover {
       margin-top: .5rem;
@@ -176,14 +180,12 @@
     .select-box-rover {
       margin-right: 0;
     }
+
    
   }
 
   @media only screen and (max-width: 425px) {
-  .rover-photo-box > img {
-    width: 80%;
-  }
-  
+
   .exit-to-rover {
     margin-right: 1.5rem;
   }
