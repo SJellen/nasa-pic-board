@@ -1,7 +1,5 @@
 import {useState, useEffect} from 'react'
 
-
-
 const apiKEY = process.env.REACT_APP_NASA_API_KEY
 // const APIlink1 = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}`
 
@@ -28,11 +26,7 @@ export default function usePhotoDayLogic() {
         .then(res => res.json())
         .then(
             (result) => {
-                
-
                 // let now = new Date().toISOString().slice(0, 10)
-                
-                
                 setPhotoDay({
                     link: result.url,
                     title: result.title,
@@ -41,12 +35,8 @@ export default function usePhotoDayLogic() {
                 })
             }
         )
-        .catch(error => console.log(error))
-       
-        
+        .catch(error => console.log(error)) 
     }, [])
-
-  
 
     function newRequest(newDate){
         const newDateLink = `https://api.nasa.gov/planetary/apod?api_key=${apiKEY}&date=${newDate}`
@@ -65,8 +55,6 @@ export default function usePhotoDayLogic() {
         )  
     }
 
-
-
     function HandelDatePicker(date) {
         setVisibleDate(date)
         setNewDate(
@@ -76,11 +64,10 @@ export default function usePhotoDayLogic() {
          newRequest(date.toISOString().slice(0, 10))
     }
 
-    
-     let min = new Date('1995-06-15')
-     const minDate = min.setDate(min.getDate() + 2)
-     let max = new Date(today)
-     const maxDate = max.setDate(max.getDate() + 1)
+    let min = new Date('1995-06-15')
+    const minDate = min.setDate(min.getDate() + 2)
+    let max = new Date(today)
+    const maxDate = max.setDate(max.getDate() + 1)
 
      function dateConversion() {
          if (visibleDate !== null) {
@@ -89,17 +76,8 @@ export default function usePhotoDayLogic() {
         return convertDate.toLocaleString('en-US', options)
          } else {
              return ''
-         }
-
-        
+         }   
     }
-
-   
-
-
-
-
-
 
     return {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, photoDay}
 }

@@ -7,7 +7,6 @@ const APIlink2 = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photo
 export default function useCuriosityLogic() {
 
     const {handleImageClick, currentImage} = useContext(Context)
-
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
     const [visibleDate, setVisibleDate] = useState(new Date("2004-03-01"))
@@ -46,7 +45,6 @@ export default function useCuriosityLogic() {
         setAmountShown(event.target.value)
     }
 
-
     function HandelDatePicker(date) {
         setVisibleDate(date)
         setNewDate(
@@ -55,7 +53,6 @@ export default function useCuriosityLogic() {
          newRequest(date.toISOString().slice(0, 10))
     }
 
-    
     let min = new Date('2012-08-05')
     const minDate = min.setDate(min.getDate() + 2)
     let max = new Date(today)
@@ -64,22 +61,14 @@ export default function useCuriosityLogic() {
     let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
     
     const photoMap = slice.map((i) => (
-       
-            <img src={i.img_src} alt="mars rover" key={i.id} className={currentImage && currentImage?.src === i.img_src ? "gallery-imageCurrent" : currentImage && currentImage?.src !== i.img_src ? "gallery-none" : 'gallery-image'} onClick={(e) => handleImageClick(e)}/> 
-        
-        
+            <img src={i.img_src} alt="mars rover" key={i.id} className={currentImage && currentImage?.src === i.img_src ? "gallery-imageCurrent" : currentImage && currentImage?.src !== i.img_src ? "gallery-none" : 'gallery-image'} onClick={(e) => handleImageClick(e)}/>   
     ))
-
 
     function dateConversion() {
         let convertDate = new Date(visibleDate)
         let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return convertDate.toLocaleString('en-US', options)
     }
-
-
-
-
 
     return {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, handleImageSubmit, amountShown, handleImageChange, photoMap}
 }

@@ -8,7 +8,6 @@ const APIlink4 = `https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/pho
 export default function useSpiritLogic() {
 
     const {handleImageClick, currentImage} = useContext(Context)
-
     const [roverPhotos, setRoverPhotos] = useState({data: []})
     const [amountShown, setAmountShown] = useState(12)
     const [visibleDate, setVisibleDate] = useState(new Date("2004-03-01"))
@@ -26,8 +25,6 @@ export default function useSpiritLogic() {
         .catch(error => console.log(error))
     }, [])
 
-
-
     function newRequest(newDate){
         const newDateLink = `https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=${newDate}&api_key=${apiKEY}`
         fetch(newDateLink)
@@ -35,13 +32,10 @@ export default function useSpiritLogic() {
         .then(
             (result) => {
                 setRoverPhotos({data: result.photos})
-
             }
         )
         .catch(error => console.log(error))
     }
-
-  
 
     function handleImageSubmit(event) {
         event.preventDefault()
@@ -50,9 +44,6 @@ export default function useSpiritLogic() {
     function handleImageChange(event) {
         setAmountShown(event.target.value)
     }
-
-
-
 
     function HandelDatePicker(date) {
         setVisibleDate(date)
@@ -63,13 +54,10 @@ export default function useSpiritLogic() {
          newRequest(date.toISOString().slice(0, 10))
     }
     
-
-    
-     let min = new Date("2004-01-04")
-     const minDate = min.setDate(min.getDate() + 2)
-     let max = new Date("2010-02-01")
-     const maxDate = max.setDate(max.getDate() + 1)
-
+    let min = new Date("2004-01-04")
+    const minDate = min.setDate(min.getDate() + 2)
+    let max = new Date("2010-02-01")
+    const maxDate = max.setDate(max.getDate() + 1)
 
     let slice = Object.entries(roverPhotos.data).slice(0,amountShown).map(entry => entry[1])
     
@@ -78,15 +66,11 @@ export default function useSpiritLogic() {
         <img src={i.img_src} alt="mars rover" key={i.id} className={currentImage && currentImage?.src === i.img_src ? "gallery-imageCurrent" : currentImage && currentImage?.src !== i.img_src ? "gallery-none" : 'gallery-image'} onClick={(e) => handleImageClick(e)}/> 
     ))
 
-
     function dateConversion() {
         let convertDate = new Date(visibleDate)
         let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         return convertDate.toLocaleString('en-US', options)
     }
             
-  
-    
-
     return {handleImageSubmit, HandelDatePicker, handleImageChange, maxDate, minDate, dateConversion, visibleDate, amountShown, photoMap}
 }

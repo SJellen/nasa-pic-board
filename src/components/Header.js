@@ -6,7 +6,6 @@ import {Context} from '../Context'
 export default function Header() {
 
     const [show, toggle] = useToggler(true)
-
     const {currentImage, handleImageClick} = useContext(Context)
 
     return (

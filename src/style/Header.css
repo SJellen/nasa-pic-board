@@ -1,16 +1,16 @@
 
-  .header {
-    width: 100%;
-    position: fixed;
-    height: 5rem;
-    top: 0;
-    z-index: 9;
-    background-color: rgba(11, 61, 145, .85);
-    backdrop-filter: blur(15px);
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: space-between;
+.header {
+  width: 100%;
+  position: fixed;
+  height: 5rem;
+  top: 0;
+  z-index: 9;
+  background-color: rgba(11, 61, 145, .85);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .title {
@@ -21,148 +21,148 @@
 }
 
 .closeHeader {
-    display: flex;
-    height: auto;
-    margin: 2rem auto -5rem auto;
-    width: 57.5%;
-    position: relative;
-    z-index: 99;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+  display: flex;
+  height: auto;
+  margin: 2rem auto -5rem auto;
+  width: 57.5%;
+  position: relative;
+  z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
   
-  .closeIconHeader {
-    display: flex;
-    fill: white;
-    margin-right: .5rem;
-  }
+.closeIconHeader {
+  display: flex;
+  fill: white;
+  margin-right: .5rem;
+}
   
-  .closeIconHeader:hover {
-    cursor: pointer;
-  }
+.closeIconHeader:hover {
+  cursor: pointer;
+}
  
-  .nav {
-    padding: 1.85rem 0 1.85rem 1rem;
-    width: 500px;
-    display: flex;
-    border-right: 1px solid white;
-    background-color: #10316b;
-  }
+.nav {
+  padding: 1.85rem 0 1.85rem 1rem;
+  width: 500px;
+  display: flex;
+  border-right: 1px solid white;
+  background-color: #10316b;
+}
 
-  .mobile-nav-container {
-      display: none;
-  }
+.mobile-nav-container {
+  display: none;
+}
 
-  .mobile-nav {
-      display: none;
-  }
+.mobile-nav {
+  display: none;
+}
   
-  a {
-    display: inline;
-    text-decoration: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    color: white;
-    padding: 1rem;
-    position: relative;
-    z-index: 99;
-  }
+a {
+  display: inline;
+  text-decoration: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  z-index: 99;
+}
   
-  a:hover {
-    cursor: pointer;
-    transition: .5s ease-in;
-    color:  silver;
-  }
+a:hover {
+  cursor: pointer;
+  transition: .5s ease-in;
+  color:  silver;
+}
   
-  @media only screen and (min-width: 1500px) {
-    .header {
-      width: 100%;
-      margin-left: -12.5%;
+@media only screen and (min-width: 1500px) {
+  .header {
+    width: 100%;
+    margin-left: -12.5%;
   }
 }
 
-  @media only screen and (max-width: 1050px) {
-    .title {
-      font-size: 1.5rem;
-      margin-top: 1.5rem;
-      margin-right: 1.75rem;
-    }
+@media only screen and (max-width: 1050px) {
+  .title {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-right: 1.75rem;
+  }
   
-    .nav {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        margin-left: 1rem;
-    }
+  .nav {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 1rem;
+  }
   
-    .header {
-      max-width: 100%;
-    }
-
-    .closeHeader {
-      width: 90%;
-    }
-    a {
-      padding: 0 1rem;
-    }
-
+  .header {
+    max-width: 100%;
   }
 
-  @media only screen and (max-width: 900px) {
-    a {
-      font-size: 1rem;
-    }
-    .title {
-        height: 90%;
-        display: flex;
-        align-items: center;
-    }
+  .closeHeader {
+    width: 90%;
   }
+  a {
+    padding: 0 1rem;
+  }
+
+}
+
+@media only screen and (max-width: 900px) {
+  a {
+    font-size: 1rem;
+  }
+  .title {
+    height: 90%;
+    display: flex;
+    align-items: center;
+  }
+}
 
 @media only screen and (max-width: 650px) {
   
-    .title {
-        display: none;
-    }
-    .nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        margin-left: 0;
-    }
-  }
-
-  @media only screen and (max-width: 500px) {
-  .header {
-      flex-direction: row;
-      justify-content: center;
+  .title {
+    display: none;
   }
   .nav {
-      display: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav {
+    display: none;
   }
 
   .mobile-nav-container {
-      display: flex;
+    display: flex;
   }
   .mobile-nav {
-      display: block;
-      background-color: rgba(11, 61, 145, .99);
-      backdrop-filter: blur(15px);
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 280px;
-      padding-top: 2rem;
+    display: block;
+    background-color: rgba(11, 61, 145, .99);
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 280px;
+    padding-top: 2rem;
   }
 
   .blade {
     z-index: 0;
     display: block;
     background-color: rgba(11, 61, 145, .99);
-      backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     position: absolute;
     top: 0px;
     left: -10%;
@@ -174,43 +174,42 @@
   }
 
   a {
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
   }
   .title {
-      display: flex;
-      position: absolute;
-      height: 25px;
-      top: 0;
-      right: 0;
-
+    display: flex;
+    position: absolute;
+    height: 25px;
+    top: 0;
+    right: 0;
   }
 
   .menu-icon {
-      font-size: 2.5rem;
-      display: block;
-      position: absolute;
-      top: 1rem;
-      left: 2rem;
-      width: 40px;
+    font-size: 2.5rem;
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 2rem;
+    width: 40px;
     }
     
-    .menu-icon:hover {
-      cursor: pointer;
-      color:  silver;
-      transition: .5s ease-in;
-    }
+  .menu-icon:hover {
+    cursor: pointer;
+    color:  silver;
+    transition: .5s ease-in;
+  }
     
-    .close-icon {
-      font-size: 2rem;
-      display: block;
-      position: relative;
-      top: 0;
-      left: 2rem;
-      width: 40px;
-      z-index: 9;
-    }
+  .close-icon {
+    font-size: 2rem;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 2rem;
+    width: 40px;
+    z-index: 9;
+  }
     
   .close-icon:hover {
     cursor: pointer;

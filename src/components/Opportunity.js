@@ -5,9 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import useOpportunityLogic from '../logic/useOpportunityLogic'
 import '../style/Rover.css'
 
-
 export default function Opportunity() {
-
 
     const {HandelDatePicker, maxDate, minDate, dateConversion, visibleDate, handleImageChange, handleImageSubmit, amountShown, photoMap} = useOpportunityLogic()
     const {currentImage} = useContext(Context)
