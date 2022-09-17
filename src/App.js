@@ -1,24 +1,33 @@
-import React from 'react';
-import PhotoDay from './components/PhotoDay'
+import React, { Suspense } from 'react';
 import '../src/style/App.css';
-import Rover from './components/Curiosity'
-import Opportunity from './components/Opportunity'
-import Spirit from './components/Spirit';
 // import Weather from './components/Weather'
 import Footer from './components/Footer'
 import Header from './components/Header'
+
+const PhotoDay = React.lazy(() => import('./components/PhotoDay'));
+const Rover = React.lazy(() => import('./components/Curiosity'));
+const Opportunity = React.lazy(() => import('./components/Opportunity'));
+const Spirit = React.lazy(() => import('./components/Spirit'));
 
 export default function App() {
 
   return (
     <div className="App" id="home" >
-        <Header />
+      <Header />
+      <Suspense fallback={<div>Loading...</div>}>
         <PhotoDay />
+      </Suspense>
         {/* <Weather /> */}
+      <Suspense fallback={<div>Loading...</div>}>
         <Rover />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Opportunity />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
         <Spirit />
-        <Footer />
+      </Suspense>
+      <Footer />
     </div>
   )
 }
